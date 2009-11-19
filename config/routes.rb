@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :pposts
+  map.resources :aadmins
+  map.connect '*pkey', :controller => 'pposts', :action => 'find_it'
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

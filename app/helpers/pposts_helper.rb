@@ -1,0 +1,2 @@
+module PpostsHelper
+end
