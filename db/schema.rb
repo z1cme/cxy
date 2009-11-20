@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091119113956) do
+ActiveRecord::Schema.define(:version => 20091120045512) do
 
   create_table "activities", :force => true do |t|
     t.integer  "user_id",    :limit => 10
@@ -288,9 +288,11 @@ ActiveRecord::Schema.define(:version => 20091119113956) do
     t.integer  "favorited_count",               :default => 0
     t.string   "published_as",    :limit => 16, :default => "draft"
     t.datetime "published_at"
+    t.string   "pkey",            :limit => 9
   end
 
   add_index "posts", ["category_id"], :name => "index_posts_on_category_id"
+  add_index "posts", ["pkey"], :name => "index_posts_on_pkey"
   add_index "posts", ["published_as"], :name => "index_posts_on_published_as"
   add_index "posts", ["published_at"], :name => "index_posts_on_published_at"
   add_index "posts", ["user_id"], :name => "index_posts_on_user_id"
