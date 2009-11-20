@@ -9,6 +9,8 @@ require File.join(File.dirname(__FILE__), 'boot')
 
 
 Rails::Initializer.run do |config|
+  # keeps AR messages in my log files and server console more clean
+  config.active_record.colorize_logging = false
   config.plugins = [:community_engine, :white_list, :all]
 config.plugin_paths += ["#{RAILS_ROOT}/vendor/plugins/community_engine/plugins"]
 
