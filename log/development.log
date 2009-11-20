@@ -7269,3 +7269,4 @@ Rendered shared/_header (5.3ms)
 Rendered shared/_messages (0.2ms)
 Page Load (0.4ms)  SELECT * FROM "pages" WHERE (published_as = 'live') 
 Completed in 341ms (View: 282, DB: 4) | 200 OK [http://localhost/bob22/posts/new]
+Loading routes from /Users/maco/pt/webprops/c1cme/c10/vendor/plugins/community_engine/config/desert_routes.rb.
