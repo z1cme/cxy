@@ -10,7 +10,8 @@
     -box :class => 'hfeed' do  
       %h3=:users_blog.l :user=>  @user.login
       .hentry.main
-        %h4.entry-title= link_to "#{@post.title} | pkey= #{@post.pkey}", user_post_path(@user, @post), :rel => 'bookmark'
+        %h4.entry-title
+          = link_to "#{@post.title} | pkey= #{@post.pkey}", @post.pkey, :rel => 'bookmark'
         .vcard.author
           - unless @user.login == "anonymous"
             %ul
@@ -73,7 +74,7 @@
       %h3=:related_posts.l
       %ul.list.page
         - @related.each do |post|
-          %li=link_to truncate("#{post.title} | pkey= #{post.pkey}", :length => 75), user_post_path(post.user, post)      
+          %li=link_to truncate("#{post.title} | pkey= #{post.pkey}", :length => 75), post.pkey      
 
   - unless @popular_posts.empty?
     -box :class => 'alt' do
