@@ -1,6 +1,7 @@
 .hentry
   %h4.entry-title{:id=>"post_#{ post.id}"}
-    = link_to "#{post.title} | pkey= #{post.pkey}", user_post_path(post.user, post), :rel => 'bookmark'
+    // = link_to "#{post.title} | pkey= #{post.pkey}", user_post_path(post.user, post), :rel => 'bookmark'
+    = link_to "#{post.title} | pkey= #{post.pkey}", post.pkey, :rel => 'bookmark'
 
   .vcard.author
     %h5
