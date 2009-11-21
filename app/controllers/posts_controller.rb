@@ -56,7 +56,8 @@ class PostsController < BaseController
     @post = Post.find_by_pkey(params[:pkey])
     if @post.nil?
       session[:user] ||= User.find_by_login("anonymous").id
-      redirect_to "/usr/#{(current_user.login || User.find_by_login('anonymous'))}/posts/new?pkey=#{params[:pkey]}"
+      usr_login = current_user.login || User.find_by_login('anonymous').login
+      redirect_to "/usr/#{usr_login}/posts/new?pkey=#{params[:pkey]}"
     else
       @user = @post.user
 
