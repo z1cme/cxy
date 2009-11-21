@@ -17,6 +17,10 @@ class PostsController < BaseController
   skip_before_filter :verify_authenticity_token, :only => [:update_views, :send_to_friend] #called from ajax on cached pages 
 
   skip_before_filter :repel_anon
+  before_filter :repel_anon2
+  def repel_anon2
+    repel_anon if %w[ send_to_friend destroy update edit ].include?(params[:action])
+  end
 
   def manage
     @posts = @user.posts.find_without_published_as(:all, 
@@ -59,6 +63,7 @@ class PostsController < BaseController
     if @post.nil?
       session[:user] ||= User.find_by_login("anonymous").id
       usr_login = current_user.login || User.find_by_login('anonymous').login
+      flash[:notice] = "You can anonymously post. Not much else.  If you Signup, you can do more."
       redirect_to "/usr/#{usr_login}/posts/new?pkey=#{params[:pkey]}"
     else
       @user = @post.user
