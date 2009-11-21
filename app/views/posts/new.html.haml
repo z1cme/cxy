@@ -29,9 +29,9 @@
           = f.hidden_field :contest_id
 
         %label
-          pkey (think of something odd and short like: "yBnrm0l")
+          pkey (Ignore this. Pick a good Title.)
           %em="(#{:required.l})"
-        = f.text_field :pkey
+        = f.text_field :pkey, {:value => params[:pkey]}
 
         %label
           =:title.l

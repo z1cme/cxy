@@ -15,7 +15,7 @@ class PostsController < BaseController
   before_filter :require_ownership_or_moderator, :only => [:edit, :update, :destroy, :create, :manage, :new]
 
   skip_before_filter :verify_authenticity_token, :only => [:update_views, :send_to_friend] #called from ajax on cached pages 
-  
+
   def manage
     @posts = @user.posts.find_without_published_as(:all, 
       :page => {:current => params[:page], :size => 10}, 
@@ -51,31 +51,34 @@ class PostsController < BaseController
       }
     end
   end
-  
+
   def pkey_show
-
     @post = Post.find_by_pkey(params[:pkey])
-    @user = @post.user
+    if @post.nil?
+      session[:user] ||= User.find_by_login("anonymous").id
+      redirect_to "/usr/#{(current_user.login || User.find_by_login('anonymous'))}/posts/new?pkey=#{params[:pkey]}"
+    else
+      @user = @post.user
 
-    @rss_title = "#{AppConfig.community_name}: #{@user.login}'s posts"
-    @rss_url = user_posts_path(@user,:format => :rss)
+      @rss_title = "#{AppConfig.community_name}: #{@user.login}'s posts"
+      @rss_url = user_posts_path(@user,:format => :rss)
     
-    @is_current_user = @user.eql?(current_user)
-    @comment = Comment.new(params[:comment])
+      @is_current_user = @user.eql?(current_user)
+      @comment = Comment.new(params[:comment])
 
-    @comments = @post.comments.find(:all, :limit => 20, :order => 'created_at DESC', :include => :user)
+      @comments = @post.comments.find(:all, :limit => 20, :order => 'created_at DESC', :include => :user)
 
-    @previous = @post.previous_post
-    @next = @post.next_post    
-    @popular_posts = @user.posts.find(:all, :limit => 10, :order => "view_count DESC")    
-    @related = Post.find_related_to(@post)
-    @most_commented = Post.find_most_commented
+      @previous = @post.previous_post
+      @next = @post.next_post    
+      @popular_posts = @user.posts.find(:all, :limit => 10, :order => "view_count DESC")    
+      @related = Post.find_related_to(@post)
+      @most_commented = Post.find_most_commented
     
-    respond_to do |format|
-      format.html
-    end
-
-  end
+      respond_to do |format|
+        format.html
+      end
+    end # if-else
+  end # def
     
   # GET /posts/1
   # GET /posts/1.xml

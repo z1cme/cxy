@@ -1,5 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.routes_from_plugin :community_engine
+  map.connect '/posts/pkey_new/:pkey', :controller => 'posts', :action => 'pkey_new', :conditions => { :method => :get }
+  map.connect '/users/:action/:id', :controller => 'users'
   map.connect '/*pkey', :controller => 'posts', :action => 'pkey_show', :conditions => { :method => :get }
 
   # The priority is based upon order of creation: first created -> highest priority.
