@@ -63,7 +63,9 @@ class PostsController < BaseController
     if @post.nil?
       session[:user] ||= User.find_by_login("anonymous").id
       usr_login = current_user.login || User.find_by_login('anonymous').login
-      flash[:notice] = "You can anonymously post. Not much else.  If you Signup, you can do more."
+      if usr_login == "anonymous"
+        flash[:notice] = "You can anonymously post. Not much else.  If you Signup, you can do more."
+      end
       redirect_to "/usr/#{usr_login}/posts/new?pkey=#{params[:pkey]}"
     else
       @user = @post.user

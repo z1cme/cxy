@@ -1,16 +1,15 @@
 .yui-b
+  -box :id => 'category_tips' do
+    -if @post.contest
+      = render :partial => "contest"
+    -elsif @post.category
+      = render :partial => "/categories/tips", :locals => {:category => @post.category}
+    - else 
+      = render :partial => "/categories/tips", :locals => {:category => nil}
   - unless @user.login == "anonymous"
-    -box :id => 'category_tips' do
-      -if @post.contest
-        = render :partial => "contest"
-      -elsif @post.category
-        = render :partial => "/categories/tips", :locals => {:category => @post.category}
-      - else 
-        = render :partial => "/categories/tips", :locals => {:category => nil}
-
     -box :class => "alt" do 
       %a.button.positive{:href => '#', :onclick => "tinyMCE.execCommand('mceCurblyAdvImage');return false;"}="Upload an image for your post".l
-    
+        
 #yui-main
   .yui-b
     -box do 
