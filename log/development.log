@@ -35115,3 +35115,284 @@ Rendered shared/_box (0.5ms)
 Rendered shared/_box (0.4ms)
 Rendered shared/_footer_content (106.6ms)
 Completed in 346ms (View: 261, DB: 15) | 200 OK [http://localhost/base/footer_content]
+
+
+Processing PostsController#pkey_show (for 127.0.0.1 at 2009-11-21 14:48:18) [GET]
+  Parameters: {"pkey"=>["jxsw"]}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+Post Load (8.4ms)  SELECT * FROM "posts" WHERE ("posts"."pkey" IN ('jxsw')) LIMIT 1
+User Load (1.1ms)  SELECT * FROM "users" WHERE ("users"."id" = 3) 
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Comment Load (2.1ms)  SELECT * FROM "comments" WHERE ("comments".commentable_id = 22 AND "comments".commentable_type = 'Post') ORDER BY created_at DESC LIMIT 20
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (1.0ms)  SELECT * FROM "posts" WHERE ("posts".user_id = 3 AND (published_at < '2009-11-21 11:04:46' and published_as = 'live')) ORDER BY published_at DESC, published_at desc LIMIT 1
+Post Load (0.6ms)  SELECT * FROM "posts" WHERE ("posts".user_id = 3 AND (published_at > '2009-11-21 11:04:46' and published_as = 'live')) ORDER BY published_at ASC, published_at desc LIMIT 1
+Post Load (2.4ms)  SELECT * FROM "posts" WHERE ("posts".user_id = 3) AND (published_as = 'live') ORDER BY view_count DESC, published_at desc LIMIT 10
+Tag Load (0.2ms)  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 22) AND ("taggings".taggable_type = 'Post')) 
+Post Load (1.6ms)  SELECT posts.*, count(*) as comments_count FROM "posts" LEFT JOIN comments ON comments.commentable_id = posts.id WHERE (comments.commentable_type = 'Post' AND posts.published_at > '2009-11-14 22:48:19') AND (published_as = 'live') GROUP BY posts.id,posts.created_at,posts.updated_at,posts.raw_post,posts.post,posts.title,posts.category_id,posts.user_id,posts.view_count,posts.contest_id,posts.emailed_count,posts.favorited_count,posts.published_as,posts.published_at,posts.pkey ORDER BY comments_count DESC LIMIT 10
+Rendering template within layouts/application
+Rendering posts/pkey_show
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 22 AND "comments".commentable_type = 'Post') 
+Friendship Load (19.5ms)  SELECT * FROM "friendships" WHERE (user_id = 1 AND friend_id = 3) LIMIT 1
+Role Load (0.4ms)  SELECT * FROM "roles" 
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "polls" WHERE ("polls".post_id = 22) 
+Rendered shared/_box (0.4ms)
+Rendered comments/_comment_form (2.7ms)
+Photo Load (0.5ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 1) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 3) 
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 22) 
+Rendered comments/_comment (31.8ms)
+Rendered shared/_box (0.4ms)
+Photo Load (0.5ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 21) 
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "posts" WHERE ("posts".user_id = 3) 
+CACHE (0.0ms)  SELECT count(*) AS count_all FROM "posts" WHERE ("posts".user_id = 3) 
+Rendered shared/_box (0.3ms)
+Rendered posts/_author_profile (6.3ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 3) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 3) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 3) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 3) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 3) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 3) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 3) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 3) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 3) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 3) 
+Rendered shared/_box (0.3ms)
+Rendered shared/_scripts_and_styles (12.4ms)
+Rendered shared/_user_menu (1.9ms)
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "messages" WHERE (recipient_id = 1 AND recipient_deleted = 'f' AND read_at IS NULL) 
+Category Load (0.3ms)  SELECT * FROM "categories" 
+Rendered shared/_header (59.1ms)
+Rendered shared/_messages (0.2ms)
+Page Load (0.5ms)  SELECT * FROM "pages" WHERE (published_as = 'live') 
+Completed in 951ms (View: 603, DB: 42) | 200 OK [http://localhost/jxsw]
+
+
+Processing PostsController#update_views (for 127.0.0.1 at 2009-11-21 14:48:21) [PUT]
+  Parameters: {"authenticity_token"=>"J6Zv4RQiraCzpObL/j+RL5NiysUmEB26MWyn8LfLZWA=", "id"=>"22-chicken", "user_id"=>"anonymous"}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+User Load (1.3ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('anonymous')) AND (users.activated_at IS NOT NULL) LIMIT 1
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('anonymous')) AND (users.activated_at IS NOT NULL) LIMIT 1
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 22) 
+Completed in 110ms (View: 79, DB: 3) | 200 OK [http://localhost/usr/anonymous/posts/22-chicken/update_views]
+
+
+Processing PostsController#recent (for 127.0.0.1 at 2009-11-21 14:52:36) [GET]
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+SQL (0.4ms)  SELECT count(posts.id) AS count_posts_id FROM "posts" WHERE (published_as = 'live') 
+Clipping Load (0.2ms)  SELECT * FROM "clippings" WHERE (created_at > '2009-11-14 22:52:36') ORDER BY created_at DESC LIMIT 15
+Photo Load (23.8ms)  SELECT * FROM "photos" WHERE (photos.created_at > '2009-11-14 22:52:36' AND photos.parent_id IS NULL) ORDER BY photos.created_at DESC LIMIT 10
+Rendering template within layouts/application
+Rendering posts/recent
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered shared/_box (0.3ms)
+Post Load (8.0ms)  SELECT * FROM "posts" WHERE (published_as = 'live') ORDER BY posts.published_at DESC LIMIT 20 OFFSET 0
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 3) 
+Photo Load (0.5ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 21) 
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 22 AND "comments".commentable_type = 'Post') 
+Friendship Load (0.3ms)  SELECT * FROM "friendships" WHERE (user_id = 1 AND friend_id = 3) LIMIT 1
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "polls" WHERE ("polls".post_id = 22) 
+Rendered posts/_post (179.9ms)
+User Load (0.9ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+SQL (0.4ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 21 AND "comments".commentable_type = 'Post') 
+Friendship Load (0.2ms)  SELECT * FROM "friendships" WHERE (user_id = 1 AND friend_id = 2) LIMIT 1
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "polls" WHERE ("polls".post_id = 21) 
+Poll Load (0.4ms)  SELECT * FROM "polls" WHERE ("polls".post_id = 21) LIMIT 1
+CACHE (0.0ms)  SELECT count(*) AS count_all FROM "polls" WHERE ("polls".post_id = 21) 
+CACHE (0.0ms)  SELECT * FROM "polls" WHERE ("polls".post_id = 21) LIMIT 1
+Post Load (0.6ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 21) 
+Rendered polls/_excerpt (4.3ms)
+Rendered posts/_post (41.0ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 3) 
+CACHE (0.0ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 21) 
+SQL (0.5ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 20 AND "comments".commentable_type = 'Post') 
+CACHE (0.0ms)  SELECT * FROM "friendships" WHERE (user_id = 1 AND friend_id = 3) LIMIT 1
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "polls" WHERE ("polls".post_id = 20) 
+Rendered posts/_post (11.0ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 3) 
+CACHE (0.0ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 21) 
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 19 AND "comments".commentable_type = 'Post') 
+CACHE (0.0ms)  SELECT * FROM "friendships" WHERE (user_id = 1 AND friend_id = 3) LIMIT 1
+SQL (0.4ms)  SELECT count(*) AS count_all FROM "polls" WHERE ("polls".post_id = 19) 
+Rendered posts/_post (13.3ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 3) 
+CACHE (0.0ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 21) 
+SQL (0.5ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 18 AND "comments".commentable_type = 'Post') 
+CACHE (0.0ms)  SELECT * FROM "friendships" WHERE (user_id = 1 AND friend_id = 3) LIMIT 1
+SQL (0.4ms)  SELECT count(*) AS count_all FROM "polls" WHERE ("polls".post_id = 18) 
+Rendered posts/_post (13.1ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 3) 
+CACHE (0.0ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 21) 
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 17 AND "comments".commentable_type = 'Post') 
+CACHE (0.0ms)  SELECT * FROM "friendships" WHERE (user_id = 1 AND friend_id = 3) LIMIT 1
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "polls" WHERE ("polls".post_id = 17) 
+Rendered posts/_post (13.2ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 3) 
+CACHE (0.0ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 21) 
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 16 AND "comments".commentable_type = 'Post') 
+CACHE (0.0ms)  SELECT * FROM "friendships" WHERE (user_id = 1 AND friend_id = 3) LIMIT 1
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "polls" WHERE ("polls".post_id = 16) 
+Rendered posts/_post (13.6ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 3) 
+CACHE (0.0ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 21) 
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 15 AND "comments".commentable_type = 'Post') 
+CACHE (0.0ms)  SELECT * FROM "friendships" WHERE (user_id = 1 AND friend_id = 3) LIMIT 1
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "polls" WHERE ("polls".post_id = 15) 
+Rendered posts/_post (11.2ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 3) 
+CACHE (0.0ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 21) 
+SQL (0.4ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 14 AND "comments".commentable_type = 'Post') 
+CACHE (0.0ms)  SELECT * FROM "friendships" WHERE (user_id = 1 AND friend_id = 3) LIMIT 1
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "polls" WHERE ("polls".post_id = 14) 
+Rendered posts/_post (10.2ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 3) 
+CACHE (0.0ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 21) 
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 13 AND "comments".commentable_type = 'Post') 
+CACHE (0.0ms)  SELECT * FROM "friendships" WHERE (user_id = 1 AND friend_id = 3) LIMIT 1
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "polls" WHERE ("polls".post_id = 13) 
+Rendered posts/_post (12.8ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 3) 
+CACHE (0.0ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 21) 
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 12 AND "comments".commentable_type = 'Post') 
+CACHE (0.0ms)  SELECT * FROM "friendships" WHERE (user_id = 1 AND friend_id = 3) LIMIT 1
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "polls" WHERE ("polls".post_id = 12) 
+Rendered posts/_post (10.0ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 3) 
+CACHE (0.0ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 21) 
+SQL (0.4ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 11 AND "comments".commentable_type = 'Post') 
+CACHE (0.0ms)  SELECT * FROM "friendships" WHERE (user_id = 1 AND friend_id = 3) LIMIT 1
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "polls" WHERE ("polls".post_id = 11) 
+Rendered posts/_post (15.2ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 3) 
+CACHE (0.0ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 21) 
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 10 AND "comments".commentable_type = 'Post') 
+CACHE (0.0ms)  SELECT * FROM "friendships" WHERE (user_id = 1 AND friend_id = 3) LIMIT 1
+SQL (0.8ms)  SELECT count(*) AS count_all FROM "polls" WHERE ("polls".post_id = 10) 
+Rendered posts/_post (11.2ms)
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Photo Load (0.5ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 1) 
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 9 AND "comments".commentable_type = 'Post') 
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "polls" WHERE ("polls".post_id = 9) 
+Rendered posts/_post (12.2ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+CACHE (0.0ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 1) 
+SQL (0.5ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 8 AND "comments".commentable_type = 'Post') 
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "polls" WHERE ("polls".post_id = 8) 
+Rendered posts/_post (8.4ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+CACHE (0.0ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 1) 
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 7 AND "comments".commentable_type = 'Post') 
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "polls" WHERE ("polls".post_id = 7) 
+Rendered posts/_post (12.4ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Photo Load (0.5ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 13) 
+SQL (0.4ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 6 AND "comments".commentable_type = 'Post') 
+CACHE (0.0ms)  SELECT * FROM "friendships" WHERE (user_id = 1 AND friend_id = 2) LIMIT 1
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "polls" WHERE ("polls".post_id = 6) 
+Rendered posts/_post (12.4ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+CACHE (0.0ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 13) 
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 5 AND "comments".commentable_type = 'Post') 
+CACHE (0.0ms)  SELECT * FROM "friendships" WHERE (user_id = 1 AND friend_id = 2) LIMIT 1
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "polls" WHERE ("polls".post_id = 5) 
+Rendered posts/_post (15.8ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+SQL (0.4ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 4 AND "comments".commentable_type = 'Post') 
+CACHE (0.0ms)  SELECT * FROM "friendships" WHERE (user_id = 1 AND friend_id = 2) LIMIT 1
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "polls" WHERE ("polls".post_id = 4) 
+Rendered posts/_post (11.7ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+CACHE (0.0ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 13) 
+SQL (0.4ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 3 AND "comments".commentable_type = 'Post') 
+CACHE (0.0ms)  SELECT * FROM "friendships" WHERE (user_id = 1 AND friend_id = 2) LIMIT 1
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "polls" WHERE ("polls".post_id = 3) 
+Rendered posts/_post (14.2ms)
+Rendered shared/_box (2.5ms)
+Rendered shared/_scripts_and_styles (2.6ms)
+Role Load (0.4ms)  SELECT * FROM "roles" 
+Rendered shared/_user_menu (30.1ms)
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "messages" WHERE (recipient_id = 1 AND recipient_deleted = 'f' AND read_at IS NULL) 
+Category Load (0.2ms)  SELECT * FROM "categories" 
+Rendered shared/_header (216.2ms)
+Rendered shared/_messages (0.2ms)
+Page Load (0.5ms)  SELECT * FROM "pages" WHERE (published_as = 'live') 
+Completed in 886ms (View: 739, DB: 55) | 200 OK [http://localhost/recent]
+
+
+Processing PostsController#pkey_show (for 127.0.0.1 at 2009-11-21 14:57:05) [GET]
+  Parameters: {"pkey"=>["posts"]}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+Post Load (0.7ms)  SELECT * FROM "posts" WHERE ("posts"."pkey" IN ('posts')) LIMIT 1
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Redirected to http://localhost:3000/usr/bob11/posts/new?pkey=posts
+Completed in 126ms (DB: 2) | 302 Found [http://localhost/posts]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2009-11-21 14:57:06) [GET]
+  Parameters: {"user_id"=>"bob11", "pkey"=>"posts"}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+User Load (1.3ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) AND (users.activated_at IS NOT NULL) LIMIT 1
+Role Load (0.4ms)  SELECT * FROM "roles" 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) AND (users.activated_at IS NOT NULL) LIMIT 1
+User Load (1.3ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) LIMIT 1
+Category Load (0.2ms)  SELECT * FROM "categories" 
+Rendering template within layouts/application
+Rendering posts/new
+Rendered categories/_tips (57.9ms)
+Rendered shared/_box (0.6ms)
+Rendered shared/_box (0.2ms)
+Rendered polls/_new (0.5ms)
+Rendered shared/_box (0.3ms)
+Rendered shared/_scripts_and_styles (23.2ms)
+Rendered shared/_user_menu (2.0ms)
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "messages" WHERE (recipient_id = 1 AND recipient_deleted = 'f' AND read_at IS NULL) 
+CACHE (0.0ms)  SELECT * FROM "categories" 
+Rendered shared/_header (7.1ms)
+Rendered shared/_messages (0.2ms)
+Page Load (0.5ms)  SELECT * FROM "pages" WHERE (published_as = 'live') 
+Completed in 392ms (View: 318, DB: 5) | 200 OK [http://localhost/usr/bob11/posts/new?pkey=posts]
+
+
+Processing PostsController#pkey_show (for 127.0.0.1 at 2009-11-21 14:57:33) [GET]
+  Parameters: {"pkey"=>["posts", "index"]}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+Post Load (0.7ms)  SELECT * FROM "posts" WHERE ("posts"."pkey" IN ('posts','index')) LIMIT 1
+User Load (0.9ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Redirected to http://localhost:3000/usr/bob11/posts/new?pkey=postsindex
+Completed in 42ms (DB: 2) | 302 Found [http://localhost/posts/index]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2009-11-21 14:57:35) [GET]
+  Parameters: {"user_id"=>"bob11", "pkey"=>"postsindex"}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+User Load (1.3ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) AND (users.activated_at IS NOT NULL) LIMIT 1
+Role Load (0.4ms)  SELECT * FROM "roles" 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) AND (users.activated_at IS NOT NULL) LIMIT 1
+User Load (1.2ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) LIMIT 1
+Category Load (0.2ms)  SELECT * FROM "categories" 
+Rendering template within layouts/application
+Rendering posts/new
+Rendered categories/_tips (56.2ms)
+Rendered shared/_box (0.3ms)
+Rendered shared/_box (0.2ms)
+Rendered polls/_new (0.7ms)
+Rendered shared/_box (0.4ms)
+Rendered shared/_scripts_and_styles (5.5ms)
+Rendered shared/_user_menu (2.0ms)
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "messages" WHERE (recipient_id = 1 AND recipient_deleted = 'f' AND read_at IS NULL) 
+CACHE (0.0ms)  SELECT * FROM "categories" 
+Rendered shared/_header (7.1ms)
+Rendered shared/_messages (0.2ms)
+Page Load (0.6ms)  SELECT * FROM "pages" WHERE (published_as = 'live') 
+Completed in 360ms (View: 285, DB: 5) | 200 OK [http://localhost/usr/bob11/posts/new?pkey=postsindex]
