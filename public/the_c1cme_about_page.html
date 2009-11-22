@@ -1,0 +1,7 @@
+p0 = Page.find_by_title "About"
+
+p0.body = <<EOF
+<p>1. Think up a short-URL (something on a license plate maybe) <br />2. Try the URL (Type it in. C what happens.) <br />3. Write ur post <br /> 4. Put short-URL in twitter <br /> demo: <a target='a' href='/un1crn'>http://c1c.me/un1crn</a></p>
+EOF
+
+p0.save
