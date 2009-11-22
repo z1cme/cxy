@@ -22,6 +22,10 @@ class PostsController < BaseController
     repel_anon if %w[ send_to_friend destroy update edit ].include?(params[:action])
   end
 
+  def prompt4post
+
+  end
+
   def manage
     @posts = @user.posts.find_without_published_as(:all, 
       :page => {:current => params[:page], :size => 10}, 
