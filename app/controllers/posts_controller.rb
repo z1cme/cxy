@@ -22,8 +22,11 @@ class PostsController < BaseController
     repel_anon if %w[ send_to_friend destroy update edit ].include?(params[:action])
   end
 
+  # Helps the user find a short_url for her post.
   def prompt4post
-
+    chars = 'abcdefghjkmnpqrstuvwxyzACDEFGHJKLMNPQRSTUVWXYZ23456789'
+    @short_url = ''
+    4.times { @short_url << chars[rand(chars.size)] }
   end
 
   def manage

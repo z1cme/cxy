@@ -1,2 +1,10 @@
 
-prompt4post
+Try this short URL =&gt; 
+%a{:href => "/#{@short_url}"}="http://c1c.me/#{@short_url}"
+%br/
+%br
+Or, think of a short URL =&gt;
+%form{:name => "prompt4post_form", :action => "/", :method => "get"}
+  http://c1c.me/
+  %input{:name => "a_short_url"}
+  %input{:value => "Try it",:type => "submit"}
