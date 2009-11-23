@@ -50774,3 +50774,1602 @@ Rendered shared/_box (0.5ms)
 Rendered shared/_box (0.2ms)
 Rendered shared/_footer_content (112.1ms)
 Completed in 371ms (View: 260, DB: 17) | 200 OK [http://localhost/base/footer_content]
+Loading routes from /Users/maco/pt/webprops/c1cme/c10/vendor/plugins/community_engine/config/desert_routes.rb.
+
+
+Processing PostsController#prompt4post (for 127.0.0.1 at 2009-11-22 17:42:47) [GET]
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+Rendering template within layouts/application
+Rendering posts/prompt4post
+Rendered shared/_scripts_and_styles (13.3ms)
+User Load (0.9ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Role Load (0.5ms)  SELECT * FROM "roles" 
+Rendered shared/_user_menu (36.6ms)
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "messages" WHERE (recipient_id = 1 AND recipient_deleted = 'f' AND read_at IS NULL) 
+Category Load (0.2ms)  SELECT * FROM "categories" 
+Rendered shared/_header (118.4ms)
+Rendered shared/_messages (0.2ms)
+Page Load (0.5ms)  SELECT * FROM "pages" WHERE (published_as = 'live') 
+Completed in 419ms (View: 409, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing BaseController#footer_content (for 127.0.0.1 at 2009-11-22 17:42:49) [POST]
+  Parameters: {"authenticity_token"=>"7k21AtdHcsms8hJAO1n4jE/3l9eGZjJQyV9hScaDl3Q="}
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+Clipping Load (0.2ms)  SELECT * FROM "clippings" WHERE (created_at > '2009-11-16 01:42:49') ORDER BY created_at DESC LIMIT 10
+Photo Load (2.4ms)  SELECT * FROM "photos" WHERE (photos.created_at > '2009-11-16 01:42:49' AND photos.parent_id IS NULL) ORDER BY photos.created_at DESC LIMIT 10
+Comment Load (1.3ms)  SELECT * FROM "comments" WHERE (created_at > '2009-11-09 01:42:49') ORDER BY created_at DESC LIMIT 13
+Tag Load (1.5ms)  SELECT tags.id, tags.name, count(*) AS count 
+ FROM taggings, tags 
+ WHERE tags.id = taggings.tag_id GROUP BY tags.id, tags.name ORDER BY count DESC LIMIT 30
+SQL (0.3ms)  SELECT count(activities.id) AS count_activities_id FROM "activities" 
+Activity Load (1.5ms)  SELECT * FROM "activities" ORDER BY activities.created_at DESC LIMIT 15 OFFSET 0
+Role Load (0.4ms)  SELECT * FROM "roles" 
+User Load (0.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (22.3ms)
+User Load (0.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Post Load (0.4ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 28) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Rendered activities/_activity (10.7ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Photo Load (0.6ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 49) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Rendered activities/_activity (10.4ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Photo Load (0.5ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 45) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Rendered activities/_activity (3.7ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Rendered activities/_activity (1.6ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.4ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 27) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.0ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Photo Load (0.5ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 41) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.2ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 26) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.7ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 25) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.1ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Photo Load (0.4ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 37) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.1ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.4ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 24) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (3.9ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Photo Load (0.5ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 33) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.1ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 23) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (5.1ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Photo Load (0.4ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 29) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.2ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Comment Load (0.4ms)  SELECT * FROM "comments" WHERE ("comments"."id" = 7) 
+User Load (0.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 3) 
+Post Load (0.4ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 22) 
+Rendered activities/_activity (10.4ms)
+Rendered shared/_box (0.5ms)
+Rendered shared/_box (0.3ms)
+Rendered shared/_footer_content (110.7ms)
+Completed in 401ms (View: 171, DB: 17) | 200 OK [http://localhost/base/footer_content]
+
+
+Processing PostsController#pkey_show (for 127.0.0.1 at 2009-11-22 17:43:31) [GET]
+  Parameters: {"pkey"=>["posts", "redirect_user_guess"], "a_short_url"=>"grnh"}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+Post Load (1.8ms)  SELECT * FROM "posts" WHERE ("posts"."pkey" IN ('posts','redirect_user_guess')) LIMIT 1
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Redirected to http://localhost:3000/usr/bob11/posts/new?pkey=postsredirect_user_guess
+Completed in 27ms (DB: 3) | 302 Found [http://localhost/posts/redirect_user_guess?a_short_url=grnh]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2009-11-22 17:43:32) [GET]
+  Parameters: {"user_id"=>"bob11", "pkey"=>"postsredirect_user_guess"}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+User Load (0.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+User Load (1.1ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) AND (users.activated_at IS NOT NULL) LIMIT 1
+Role Load (0.4ms)  SELECT * FROM "roles" 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) AND (users.activated_at IS NOT NULL) LIMIT 1
+User Load (1.2ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) LIMIT 1
+Category Load (0.2ms)  SELECT * FROM "categories" 
+Rendering template within layouts/application
+Rendering posts/new
+Rendered categories/_tips (59.0ms)
+Rendered shared/_box (0.3ms)
+Rendered shared/_box (0.2ms)
+Rendered polls/_new (0.6ms)
+Rendered shared/_box (0.4ms)
+Rendered shared/_scripts_and_styles (3.6ms)
+Rendered shared/_user_menu (1.8ms)
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "messages" WHERE (recipient_id = 1 AND recipient_deleted = 'f' AND read_at IS NULL) 
+CACHE (0.0ms)  SELECT * FROM "categories" 
+Rendered shared/_header (6.3ms)
+Rendered shared/_messages (0.1ms)
+Page Load (0.5ms)  SELECT * FROM "pages" WHERE (published_as = 'live') 
+Completed in 474ms (View: 300, DB: 4) | 200 OK [http://localhost/usr/bob11/posts/new?pkey=postsredirect_user_guess]
+Loading routes from /Users/maco/pt/webprops/c1cme/c10/vendor/plugins/community_engine/config/desert_routes.rb.
+
+
+Processing PostsController#prompt4post (for 127.0.0.1 at 2009-11-22 17:44:09) [GET]
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+Rendering template within layouts/application
+Rendering posts/prompt4post
+Rendered shared/_scripts_and_styles (28.7ms)
+User Load (0.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Role Load (0.4ms)  SELECT * FROM "roles" 
+Rendered shared/_user_menu (30.3ms)
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "messages" WHERE (recipient_id = 1 AND recipient_deleted = 'f' AND read_at IS NULL) 
+Category Load (0.2ms)  SELECT * FROM "categories" 
+Rendered shared/_header (106.3ms)
+Rendered shared/_messages (2.0ms)
+Page Load (0.5ms)  SELECT * FROM "pages" WHERE (published_as = 'live') 
+Completed in 626ms (View: 615, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing BaseController#footer_content (for 127.0.0.1 at 2009-11-22 17:44:11) [POST]
+  Parameters: {"authenticity_token"=>"7k21AtdHcsms8hJAO1n4jE/3l9eGZjJQyV9hScaDl3Q="}
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+Clipping Load (0.2ms)  SELECT * FROM "clippings" WHERE (created_at > '2009-11-16 01:44:11') ORDER BY created_at DESC LIMIT 10
+Photo Load (2.4ms)  SELECT * FROM "photos" WHERE (photos.created_at > '2009-11-16 01:44:10' AND photos.parent_id IS NULL) ORDER BY photos.created_at DESC LIMIT 10
+Comment Load (1.3ms)  SELECT * FROM "comments" WHERE (created_at > '2009-11-09 01:44:11') ORDER BY created_at DESC LIMIT 13
+Tag Load (1.5ms)  SELECT tags.id, tags.name, count(*) AS count 
+ FROM taggings, tags 
+ WHERE tags.id = taggings.tag_id GROUP BY tags.id, tags.name ORDER BY count DESC LIMIT 30
+SQL (0.2ms)  SELECT count(activities.id) AS count_activities_id FROM "activities" 
+Activity Load (1.7ms)  SELECT * FROM "activities" ORDER BY activities.created_at DESC LIMIT 15 OFFSET 0
+Role Load (0.4ms)  SELECT * FROM "roles" 
+User Load (0.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (28.7ms)
+User Load (0.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 28) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Rendered activities/_activity (9.9ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Photo Load (0.5ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 49) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Rendered activities/_activity (9.4ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Photo Load (0.5ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 45) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Rendered activities/_activity (3.5ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Rendered activities/_activity (1.5ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 27) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.0ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Photo Load (0.5ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 41) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.1ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.4ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 26) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (3.9ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.4ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 25) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (3.9ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Photo Load (0.4ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 37) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (3.9ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 24) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.9ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Photo Load (0.4ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 33) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.2ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.4ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 23) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.1ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Photo Load (0.5ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 29) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.4ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Comment Load (0.5ms)  SELECT * FROM "comments" WHERE ("comments"."id" = 7) 
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 3) 
+Post Load (0.4ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 22) 
+Rendered activities/_activity (27.6ms)
+Rendered shared/_box (1.9ms)
+Rendered shared/_box (0.3ms)
+Rendered shared/_footer_content (224.6ms)
+Completed in 541ms (View: 373, DB: 17) | 200 OK [http://localhost/base/footer_content]
+
+
+Processing PostsController#pkey_show (for 127.0.0.1 at 2009-11-22 17:44:17) [GET]
+  Parameters: {"pkey"=>["posts", "redirect_user_guess"], "a_short_url"=>"jjh"}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+Post Load (0.6ms)  SELECT * FROM "posts" WHERE ("posts"."pkey" IN ('posts','redirect_user_guess')) LIMIT 1
+User Load (0.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Redirected to http://localhost:3000/usr/bob11/posts/new?pkey=postsredirect_user_guess
+Completed in 25ms (DB: 1) | 302 Found [http://localhost/posts/redirect_user_guess?a_short_url=jjh]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2009-11-22 17:44:18) [GET]
+  Parameters: {"user_id"=>"bob11", "pkey"=>"postsredirect_user_guess"}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+User Load (1.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+User Load (1.2ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) AND (users.activated_at IS NOT NULL) LIMIT 1
+Role Load (0.4ms)  SELECT * FROM "roles" 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) AND (users.activated_at IS NOT NULL) LIMIT 1
+User Load (1.3ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) LIMIT 1
+Category Load (0.2ms)  SELECT * FROM "categories" 
+Rendering template within layouts/application
+Rendering posts/new
+Rendered categories/_tips (15.3ms)
+Rendered shared/_box (0.3ms)
+Rendered shared/_box (0.2ms)
+Rendered polls/_new (5.9ms)
+Rendered shared/_box (0.3ms)
+Rendered shared/_scripts_and_styles (3.5ms)
+Rendered shared/_user_menu (1.9ms)
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "messages" WHERE (recipient_id = 1 AND recipient_deleted = 'f' AND read_at IS NULL) 
+CACHE (0.0ms)  SELECT * FROM "categories" 
+Rendered shared/_header (6.7ms)
+Rendered shared/_messages (0.1ms)
+Page Load (0.5ms)  SELECT * FROM "pages" WHERE (published_as = 'live') 
+Completed in 512ms (View: 341, DB: 5) | 200 OK [http://localhost/usr/bob11/posts/new?pkey=postsredirect_user_guess]
+Loading routes from /Users/maco/pt/webprops/c1cme/c10/vendor/plugins/community_engine/config/desert_routes.rb.
+
+
+Processing PostsController#prompt4post (for 127.0.0.1 at 2009-11-22 17:46:14) [GET]
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+Rendering template within layouts/application
+Rendering posts/prompt4post
+Rendered shared/_scripts_and_styles (32.4ms)
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Role Load (0.4ms)  SELECT * FROM "roles" 
+Rendered shared/_user_menu (31.3ms)
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "messages" WHERE (recipient_id = 1 AND recipient_deleted = 'f' AND read_at IS NULL) 
+Category Load (0.2ms)  SELECT * FROM "categories" 
+Rendered shared/_header (104.0ms)
+Rendered shared/_messages (1.8ms)
+Page Load (0.5ms)  SELECT * FROM "pages" WHERE (published_as = 'live') 
+Completed in 586ms (View: 575, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing BaseController#footer_content (for 127.0.0.1 at 2009-11-22 17:46:15) [POST]
+  Parameters: {"authenticity_token"=>"7k21AtdHcsms8hJAO1n4jE/3l9eGZjJQyV9hScaDl3Q="}
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+Clipping Load (0.2ms)  SELECT * FROM "clippings" WHERE (created_at > '2009-11-16 01:46:15') ORDER BY created_at DESC LIMIT 10
+Photo Load (2.3ms)  SELECT * FROM "photos" WHERE (photos.created_at > '2009-11-16 01:46:15' AND photos.parent_id IS NULL) ORDER BY photos.created_at DESC LIMIT 10
+Comment Load (1.3ms)  SELECT * FROM "comments" WHERE (created_at > '2009-11-09 01:46:15') ORDER BY created_at DESC LIMIT 13
+Tag Load (1.4ms)  SELECT tags.id, tags.name, count(*) AS count 
+ FROM taggings, tags 
+ WHERE tags.id = taggings.tag_id GROUP BY tags.id, tags.name ORDER BY count DESC LIMIT 30
+SQL (0.2ms)  SELECT count(activities.id) AS count_activities_id FROM "activities" 
+Activity Load (1.7ms)  SELECT * FROM "activities" ORDER BY activities.created_at DESC LIMIT 15 OFFSET 0
+Role Load (0.4ms)  SELECT * FROM "roles" 
+User Load (0.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (31.3ms)
+User Load (0.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Post Load (0.4ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 28) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Rendered activities/_activity (9.4ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Photo Load (0.4ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 49) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Rendered activities/_activity (10.6ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Photo Load (0.5ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 45) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Rendered activities/_activity (4.1ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Rendered activities/_activity (2.2ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 27) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (5.7ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Photo Load (0.4ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 41) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.4ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.4ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 26) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (3.9ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 25) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.3ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Photo Load (0.4ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 37) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.0ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.6ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 24) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (5.1ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Photo Load (0.4ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 33) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.3ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 23) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.5ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Photo Load (0.4ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 29) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.3ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Comment Load (0.4ms)  SELECT * FROM "comments" WHERE ("comments"."id" = 7) 
+User Load (0.9ms)  SELECT * FROM "users" WHERE ("users"."id" = 3) 
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 22) 
+Rendered activities/_activity (99.9ms)
+Rendered shared/_box (2.0ms)
+Rendered shared/_box (0.3ms)
+Rendered shared/_footer_content (252.8ms)
+Completed in 547ms (View: 398, DB: 17) | 200 OK [http://localhost/base/footer_content]
+
+
+Processing PostsController#redirect_user_guess (for 127.0.0.1 at 2009-11-22 17:46:24) [GET]
+  Parameters: {"a_short_url"=>"jhd"}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+
+NameError (undefined local variable or method `a_short_url' for #<PostsController:0x3d5b33c>):
+  app/controllers/posts_controller.rb:34:in `redirect_user_guess'
+  haml (2.0.9) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (161.1ms)
+Rendered rescues/_request_and_response (1.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#prompt4post (for 127.0.0.1 at 2009-11-22 17:47:31) [GET]
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+Rendering template within layouts/application
+Rendering posts/prompt4post
+Rendered shared/_scripts_and_styles (2.6ms)
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Role Load (0.4ms)  SELECT * FROM "roles" 
+Rendered shared/_user_menu (26.2ms)
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "messages" WHERE (recipient_id = 1 AND recipient_deleted = 'f' AND read_at IS NULL) 
+Category Load (0.2ms)  SELECT * FROM "categories" 
+Rendered shared/_header (71.5ms)
+Rendered shared/_messages (0.2ms)
+Page Load (0.5ms)  SELECT * FROM "pages" WHERE (published_as = 'live') 
+Completed in 276ms (View: 266, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing BaseController#footer_content (for 127.0.0.1 at 2009-11-22 17:47:32) [POST]
+  Parameters: {"authenticity_token"=>"7k21AtdHcsms8hJAO1n4jE/3l9eGZjJQyV9hScaDl3Q="}
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+Clipping Load (0.2ms)  SELECT * FROM "clippings" WHERE (created_at > '2009-11-16 01:47:32') ORDER BY created_at DESC LIMIT 10
+Photo Load (2.4ms)  SELECT * FROM "photos" WHERE (photos.created_at > '2009-11-16 01:47:32' AND photos.parent_id IS NULL) ORDER BY photos.created_at DESC LIMIT 10
+Comment Load (1.4ms)  SELECT * FROM "comments" WHERE (created_at > '2009-11-09 01:47:32') ORDER BY created_at DESC LIMIT 13
+Tag Load (1.4ms)  SELECT tags.id, tags.name, count(*) AS count 
+ FROM taggings, tags 
+ WHERE tags.id = taggings.tag_id GROUP BY tags.id, tags.name ORDER BY count DESC LIMIT 30
+SQL (0.2ms)  SELECT count(activities.id) AS count_activities_id FROM "activities" 
+Activity Load (1.4ms)  SELECT * FROM "activities" ORDER BY activities.created_at DESC LIMIT 15 OFFSET 0
+Role Load (0.4ms)  SELECT * FROM "roles" 
+User Load (0.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (22.0ms)
+User Load (0.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Post Load (0.4ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 28) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Rendered activities/_activity (9.7ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Photo Load (0.4ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 49) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Rendered activities/_activity (10.0ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Photo Load (0.5ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 45) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Rendered activities/_activity (3.6ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Rendered activities/_activity (1.6ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.4ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 27) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.1ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Photo Load (0.4ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 41) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.0ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.4ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 26) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (3.9ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.4ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 25) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (3.8ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Photo Load (0.4ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 37) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.0ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.6ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 24) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (5.7ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Photo Load (0.4ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 33) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.1ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.4ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 23) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.1ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Photo Load (0.5ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 29) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.3ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Comment Load (0.4ms)  SELECT * FROM "comments" WHERE ("comments"."id" = 7) 
+User Load (0.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 3) 
+Post Load (0.4ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 22) 
+Rendered activities/_activity (11.0ms)
+Rendered shared/_box (0.5ms)
+Rendered shared/_box (0.2ms)
+Rendered shared/_footer_content (205.1ms)
+Completed in 492ms (View: 260, DB: 17) | 200 OK [http://localhost/base/footer_content]
+
+
+Processing PostsController#redirect_user_guess (for 127.0.0.1 at 2009-11-22 17:47:37) [GET]
+  Parameters: {"a_short_url"=>"jhdk"}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+Redirected to http://localhost:3000/jhdk
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/posts/redirect_user_guess?a_short_url=jhdk]
+
+
+Processing PostsController#pkey_show (for 127.0.0.1 at 2009-11-22 17:47:38) [GET]
+  Parameters: {"pkey"=>["jhdk"]}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+Post Load (0.6ms)  SELECT * FROM "posts" WHERE ("posts"."pkey" IN ('jhdk')) LIMIT 1
+User Load (0.9ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Redirected to http://localhost:3000/usr/bob11/posts/new?pkey=jhdk
+Completed in 115ms (DB: 1) | 302 Found [http://localhost/jhdk]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2009-11-22 17:47:39) [GET]
+  Parameters: {"user_id"=>"bob11", "pkey"=>"jhdk"}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+User Load (0.9ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+User Load (1.2ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) AND (users.activated_at IS NOT NULL) LIMIT 1
+Role Load (0.5ms)  SELECT * FROM "roles" 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) AND (users.activated_at IS NOT NULL) LIMIT 1
+User Load (1.2ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) LIMIT 1
+Category Load (0.2ms)  SELECT * FROM "categories" 
+Rendering template within layouts/application
+Rendering posts/new
+Rendered categories/_tips (18.9ms)
+Rendered shared/_box (0.3ms)
+Rendered shared/_box (0.2ms)
+Rendered polls/_new (57.7ms)
+Rendered shared/_box (1.4ms)
+Rendered shared/_scripts_and_styles (4.4ms)
+Rendered shared/_user_menu (1.9ms)
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "messages" WHERE (recipient_id = 1 AND recipient_deleted = 'f' AND read_at IS NULL) 
+CACHE (0.0ms)  SELECT * FROM "categories" 
+Rendered shared/_header (6.5ms)
+Rendered shared/_messages (0.2ms)
+Page Load (0.5ms)  SELECT * FROM "pages" WHERE (published_as = 'live') 
+Completed in 504ms (View: 425, DB: 5) | 200 OK [http://localhost/usr/bob11/posts/new?pkey=jhdk]
+
+
+Processing PostsController#prompt4post (for 127.0.0.1 at 2009-11-22 17:53:46) [GET]
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+Rendering template within layouts/application
+Rendering posts/prompt4post
+Rendered shared/_scripts_and_styles (2.5ms)
+User Load (0.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Role Load (0.5ms)  SELECT * FROM "roles" 
+Rendered shared/_user_menu (133.7ms)
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "messages" WHERE (recipient_id = 1 AND recipient_deleted = 'f' AND read_at IS NULL) 
+Category Load (0.2ms)  SELECT * FROM "categories" 
+Rendered shared/_header (181.7ms)
+Rendered shared/_messages (0.2ms)
+Page Load (0.5ms)  SELECT * FROM "pages" WHERE (published_as = 'live') 
+Completed in 286ms (View: 277, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing BaseController#footer_content (for 127.0.0.1 at 2009-11-22 17:53:47) [POST]
+  Parameters: {"authenticity_token"=>"7k21AtdHcsms8hJAO1n4jE/3l9eGZjJQyV9hScaDl3Q="}
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+Clipping Load (0.3ms)  SELECT * FROM "clippings" WHERE (created_at > '2009-11-16 01:53:47') ORDER BY created_at DESC LIMIT 10
+Photo Load (2.4ms)  SELECT * FROM "photos" WHERE (photos.created_at > '2009-11-16 01:53:47' AND photos.parent_id IS NULL) ORDER BY photos.created_at DESC LIMIT 10
+Comment Load (1.3ms)  SELECT * FROM "comments" WHERE (created_at > '2009-11-09 01:53:48') ORDER BY created_at DESC LIMIT 13
+Tag Load (2.3ms)  SELECT tags.id, tags.name, count(*) AS count 
+ FROM taggings, tags 
+ WHERE tags.id = taggings.tag_id GROUP BY tags.id, tags.name ORDER BY count DESC LIMIT 30
+SQL (0.3ms)  SELECT count(activities.id) AS count_activities_id FROM "activities" 
+Activity Load (1.6ms)  SELECT * FROM "activities" ORDER BY activities.created_at DESC LIMIT 15 OFFSET 0
+Role Load (0.4ms)  SELECT * FROM "roles" 
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (26.9ms)
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Post Load (0.4ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 28) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Rendered activities/_activity (10.8ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Photo Load (0.6ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 49) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Rendered activities/_activity (11.2ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Photo Load (0.5ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 45) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Rendered activities/_activity (4.5ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Rendered activities/_activity (1.9ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 27) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.2ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Photo Load (0.4ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 41) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.1ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 26) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.5ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 25) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.2ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Photo Load (0.4ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 37) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.0ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 24) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.5ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Photo Load (0.5ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 33) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.2ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 23) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.3ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Photo Load (0.5ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 29) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.6ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Comment Load (0.4ms)  SELECT * FROM "comments" WHERE ("comments"."id" = 7) 
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 3) 
+Post Load (0.4ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 22) 
+Rendered activities/_activity (11.9ms)
+Rendered shared/_box (0.5ms)
+Rendered shared/_box (0.3ms)
+Rendered shared/_footer_content (120.1ms)
+Completed in 420ms (View: 272, DB: 18) | 200 OK [http://localhost/base/footer_content]
+
+
+Processing PostsController#pkey_show (for 127.0.0.1 at 2009-11-22 17:53:54) [GET]
+  Parameters: {"pkey"=>["khrT"]}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+Post Load (0.6ms)  SELECT * FROM "posts" WHERE ("posts"."pkey" IN ('khrT')) LIMIT 1
+User Load (0.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Redirected to http://localhost:3000/usr/bob11/posts/new?pkey=khrT
+Completed in 27ms (DB: 1) | 302 Found [http://localhost/khrT]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2009-11-22 17:53:54) [GET]
+  Parameters: {"user_id"=>"bob11", "pkey"=>"khrT"}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+User Load (0.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+User Load (1.1ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) AND (users.activated_at IS NOT NULL) LIMIT 1
+Role Load (0.4ms)  SELECT * FROM "roles" 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) AND (users.activated_at IS NOT NULL) LIMIT 1
+User Load (1.1ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) LIMIT 1
+Category Load (0.2ms)  SELECT * FROM "categories" 
+Rendering template within layouts/application
+Rendering posts/new
+Rendered categories/_tips (146.7ms)
+Rendered shared/_box (0.3ms)
+Rendered shared/_box (0.2ms)
+Rendered polls/_new (0.5ms)
+Rendered shared/_box (0.4ms)
+Rendered shared/_scripts_and_styles (4.2ms)
+Rendered shared/_user_menu (2.6ms)
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "messages" WHERE (recipient_id = 1 AND recipient_deleted = 'f' AND read_at IS NULL) 
+CACHE (0.0ms)  SELECT * FROM "categories" 
+Rendered shared/_header (7.3ms)
+Rendered shared/_messages (0.2ms)
+Page Load (0.5ms)  SELECT * FROM "pages" WHERE (published_as = 'live') 
+Completed in 361ms (View: 294, DB: 4) | 200 OK [http://localhost/usr/bob11/posts/new?pkey=khrT]
+
+
+Processing PostsController#prompt4post (for 127.0.0.1 at 2009-11-22 17:54:17) [GET]
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+Rendering template within layouts/application
+Rendering posts/prompt4post
+Rendered shared/_scripts_and_styles (3.0ms)
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Role Load (0.4ms)  SELECT * FROM "roles" 
+Rendered shared/_user_menu (26.7ms)
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "messages" WHERE (recipient_id = 1 AND recipient_deleted = 'f' AND read_at IS NULL) 
+Category Load (0.2ms)  SELECT * FROM "categories" 
+Rendered shared/_header (70.8ms)
+Rendered shared/_messages (0.2ms)
+Page Load (0.5ms)  SELECT * FROM "pages" WHERE (published_as = 'live') 
+Completed in 267ms (View: 258, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing BaseController#footer_content (for 127.0.0.1 at 2009-11-22 17:54:18) [POST]
+  Parameters: {"authenticity_token"=>"7k21AtdHcsms8hJAO1n4jE/3l9eGZjJQyV9hScaDl3Q="}
+User Load (0.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+Clipping Load (0.2ms)  SELECT * FROM "clippings" WHERE (created_at > '2009-11-16 01:54:18') ORDER BY created_at DESC LIMIT 10
+Photo Load (2.2ms)  SELECT * FROM "photos" WHERE (photos.created_at > '2009-11-16 01:54:18' AND photos.parent_id IS NULL) ORDER BY photos.created_at DESC LIMIT 10
+Comment Load (1.7ms)  SELECT * FROM "comments" WHERE (created_at > '2009-11-09 01:54:18') ORDER BY created_at DESC LIMIT 13
+Tag Load (1.4ms)  SELECT tags.id, tags.name, count(*) AS count 
+ FROM taggings, tags 
+ WHERE tags.id = taggings.tag_id GROUP BY tags.id, tags.name ORDER BY count DESC LIMIT 30
+SQL (0.3ms)  SELECT count(activities.id) AS count_activities_id FROM "activities" 
+Activity Load (1.8ms)  SELECT * FROM "activities" ORDER BY activities.created_at DESC LIMIT 15 OFFSET 0
+Role Load (0.4ms)  SELECT * FROM "roles" 
+User Load (0.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (23.7ms)
+User Load (0.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 28) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Rendered activities/_activity (9.8ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Photo Load (0.4ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 49) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Rendered activities/_activity (9.0ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Photo Load (0.4ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 45) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Rendered activities/_activity (3.5ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Rendered activities/_activity (2.0ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 27) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.1ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Photo Load (0.4ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 41) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.1ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.4ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 26) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.0ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 25) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.0ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Photo Load (0.5ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 37) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (5.2ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.4ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 24) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.1ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Photo Load (0.4ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 33) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (3.9ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.4ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 23) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.0ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Photo Load (0.4ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 29) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (3.9ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Comment Load (0.4ms)  SELECT * FROM "comments" WHERE ("comments"."id" = 7) 
+User Load (0.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 3) 
+Post Load (0.4ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 22) 
+Rendered activities/_activity (10.4ms)
+Rendered shared/_box (1.3ms)
+Rendered shared/_box (0.4ms)
+Rendered shared/_footer_content (206.3ms)
+Completed in 461ms (View: 259, DB: 17) | 200 OK [http://localhost/base/footer_content]
+
+
+Processing PostsController#redirect_user_guess (for 127.0.0.1 at 2009-11-22 17:54:24) [GET]
+  Parameters: {"a_short_url"=>"mm8"}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+Redirected to http://localhost:3000/mm8
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/posts/redirect_user_guess?a_short_url=mm8]
+
+
+Processing PostsController#pkey_show (for 127.0.0.1 at 2009-11-22 17:54:25) [GET]
+  Parameters: {"pkey"=>["mm8"]}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+Post Load (0.6ms)  SELECT * FROM "posts" WHERE ("posts"."pkey" IN ('mm8')) LIMIT 1
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Redirected to http://localhost:3000/usr/bob11/posts/new?pkey=mm8
+Completed in 114ms (DB: 1) | 302 Found [http://localhost/mm8]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2009-11-22 17:54:26) [GET]
+  Parameters: {"user_id"=>"bob11", "pkey"=>"mm8"}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+User Load (1.1ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) AND (users.activated_at IS NOT NULL) LIMIT 1
+Role Load (0.4ms)  SELECT * FROM "roles" 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) AND (users.activated_at IS NOT NULL) LIMIT 1
+User Load (1.2ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) LIMIT 1
+Category Load (0.2ms)  SELECT * FROM "categories" 
+Rendering template within layouts/application
+Rendering posts/new
+Rendered categories/_tips (55.4ms)
+Rendered shared/_box (0.3ms)
+Rendered shared/_box (0.2ms)
+Rendered polls/_new (0.5ms)
+Rendered shared/_box (0.3ms)
+Rendered shared/_scripts_and_styles (3.9ms)
+Rendered shared/_user_menu (1.8ms)
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "messages" WHERE (recipient_id = 1 AND recipient_deleted = 'f' AND read_at IS NULL) 
+CACHE (0.0ms)  SELECT * FROM "categories" 
+Rendered shared/_header (6.7ms)
+Rendered shared/_messages (0.1ms)
+Page Load (0.5ms)  SELECT * FROM "pages" WHERE (published_as = 'live') 
+Completed in 340ms (View: 268, DB: 4) | 200 OK [http://localhost/usr/bob11/posts/new?pkey=mm8]
+
+
+Processing PostsController#pkey_show (for 127.0.0.1 at 2009-11-22 17:54:45) [GET]
+  Parameters: {"pkey"=>["mm8"]}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+Post Load (206.8ms)  SELECT * FROM "posts" WHERE ("posts"."pkey" IN ('mm8')) LIMIT 1
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Redirected to http://localhost:3000/usr/bob11/posts/new?pkey=mm8
+Completed in 239ms (DB: 208) | 302 Found [http://localhost/mm8]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2009-11-22 17:54:46) [GET]
+  Parameters: {"user_id"=>"bob11", "pkey"=>"mm8"}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+User Load (0.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+User Load (1.0ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) AND (users.activated_at IS NOT NULL) LIMIT 1
+Role Load (0.4ms)  SELECT * FROM "roles" 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) AND (users.activated_at IS NOT NULL) LIMIT 1
+User Load (1.2ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) LIMIT 1
+Category Load (0.2ms)  SELECT * FROM "categories" 
+Rendering template within layouts/application
+Rendering posts/new
+Rendered categories/_tips (144.5ms)
+Rendered shared/_box (0.3ms)
+Rendered shared/_box (0.2ms)
+Rendered polls/_new (0.5ms)
+Rendered shared/_box (0.3ms)
+Rendered shared/_scripts_and_styles (3.5ms)
+Rendered shared/_user_menu (2.8ms)
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "messages" WHERE (recipient_id = 1 AND recipient_deleted = 'f' AND read_at IS NULL) 
+CACHE (0.0ms)  SELECT * FROM "categories" 
+Rendered shared/_header (7.8ms)
+Rendered shared/_messages (0.1ms)
+Page Load (0.5ms)  SELECT * FROM "pages" WHERE (published_as = 'live') 
+Completed in 338ms (View: 267, DB: 4) | 200 OK [http://localhost/usr/bob11/posts/new?pkey=mm8]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-11-22 17:56:09) [POST]
+  Parameters: {"poll"=>{"question"=>""}, "commit"=>"Save", "post"=>{"title"=>"hello world mm8", "raw_post"=>"<p>bye</p>", "pkey"=>"mm8", "category_id"=>"", "published_as"=>"live", "contest_id"=>""}, "authenticity_token"=>"7k21AtdHcsms8hJAO1n4jE/3l9eGZjJQyV9hScaDl3Q=", "user_id"=>"bob11", "tag_list"=>"", "choices"=>["", "", ""]}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+User Load (0.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+User Load (1.1ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) LIMIT 1
+Role Load (0.4ms)  SELECT * FROM "roles" 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) LIMIT 1
+Post Create (0.6ms)  INSERT INTO "posts" ("created_at", "post", "title", "updated_at", "emailed_count", "raw_post", "category_id", "user_id", "pkey", "published_as", "contest_id", "favorited_count", "published_at", "view_count") VALUES('2009-11-23 01:56:09', '<p>bye</p>', 'hello world mm8', '2009-11-23 01:56:09', 0, '<p>bye</p>', NULL, 1, 'mm8', 'live', NULL, 0, '2009-11-23 01:56:09', 0)
+Activity Create (0.2ms)  INSERT INTO "activities" ("created_at", "action", "user_id", "item_id", "item_type") VALUES('2009-11-23 01:56:09', 'post', 1, 29, 'Post')
+User Load (0.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+SQL (0.1ms)  SELECT count(*) AS count_all FROM "activities" WHERE (user_id = 1) 
+User Update (0.2ms)  UPDATE "users" SET "updated_at" = '2009-11-23 01:56:09', "activities_count" = 28 WHERE "id" = 1
+Tag Load (0.3ms)  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'User')) 
+MetroArea Load (0.3ms)  SELECT * FROM "metro_areas" WHERE ("metro_areas"."id" = 221) 
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "users" WHERE (metro_area_id = 221) 
+Tag Load (0.2ms)  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 29) AND ("taggings".taggable_type = 'Post')) 
+Activity Load (0.3ms)  SELECT * FROM "activities" WHERE ("activities"."item_type" = 'Post' AND "activities"."item_id" = 29) LIMIT 1
+Redirected to http://localhost:3000/mm8
+Completed in 435ms (DB: 5) | 302 Found [http://localhost/usr/bob11/posts]
+
+
+Processing PostsController#pkey_show (for 127.0.0.1 at 2009-11-22 17:56:10) [GET]
+  Parameters: {"pkey"=>["mm8"]}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+Post Load (0.9ms)  SELECT * FROM "posts" WHERE ("posts"."pkey" IN ('mm8')) LIMIT 1
+User Load (0.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Comment Load (0.7ms)  SELECT * FROM "comments" WHERE ("comments".commentable_id = 29 AND "comments".commentable_type = 'Post') ORDER BY created_at DESC LIMIT 20
+Post Load (1.0ms)  SELECT * FROM "posts" WHERE ("posts".user_id = 1 AND (published_at < '2009-11-23 01:56:09' and published_as = 'live')) ORDER BY published_at DESC, published_at desc LIMIT 1
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts".user_id = 1 AND (published_at > '2009-11-23 01:56:09' and published_as = 'live')) ORDER BY published_at ASC, published_at desc LIMIT 1
+Post Load (2.2ms)  SELECT * FROM "posts" WHERE ("posts".user_id = 1) AND (published_as = 'live') ORDER BY view_count DESC, published_at desc LIMIT 10
+Tag Load (0.2ms)  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 29) AND ("taggings".taggable_type = 'Post')) 
+Post Load (1.3ms)  SELECT posts.*, count(*) as comments_count FROM "posts" LEFT JOIN comments ON comments.commentable_id = posts.id WHERE (comments.commentable_type = 'Post' AND posts.published_at > '2009-11-16 01:56:11') AND (published_as = 'live') GROUP BY posts.id,posts.created_at,posts.updated_at,posts.raw_post,posts.post,posts.title,posts.category_id,posts.user_id,posts.view_count,posts.contest_id,posts.emailed_count,posts.favorited_count,posts.published_as,posts.published_at,posts.pkey ORDER BY comments_count DESC LIMIT 10
+Rendering template within layouts/application
+Rendering posts/pkey_show
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 29 AND "comments".commentable_type = 'Post') 
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "polls" WHERE ("polls".post_id = 29) 
+Rendered shared/_box (0.4ms)
+Rendered comments/_comment_form (29.3ms)
+Rendered shared/_box (0.4ms)
+Photo Load (0.4ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 1) 
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "posts" WHERE ("posts".user_id = 1) 
+CACHE (0.0ms)  SELECT count(*) AS count_all FROM "posts" WHERE ("posts".user_id = 1) 
+Rendered shared/_box (0.3ms)
+Rendered posts/_author_profile (13.9ms)
+Rendered shared/_box (0.3ms)
+Rendered shared/_scripts_and_styles (2.4ms)
+Role Load (0.4ms)  SELECT * FROM "roles" 
+Rendered shared/_user_menu (19.5ms)
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "messages" WHERE (recipient_id = 1 AND recipient_deleted = 'f' AND read_at IS NULL) 
+Category Load (0.2ms)  SELECT * FROM "categories" 
+Rendered shared/_header (56.4ms)
+Rendered shared/_messages (0.4ms)
+Page Load (0.5ms)  SELECT * FROM "pages" WHERE (published_as = 'live') 
+Completed in 709ms (View: 468, DB: 11) | 200 OK [http://localhost/mm8]
+
+
+Processing PostsController#update_views (for 127.0.0.1 at 2009-11-22 17:56:13) [PUT]
+  Parameters: {"authenticity_token"=>"7k21AtdHcsms8hJAO1n4jE/3l9eGZjJQyV9hScaDl3Q=", "id"=>"29-hello-world-mm8", "user_id"=>"bob11"}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+User Load (1.2ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) AND (users.activated_at IS NOT NULL) LIMIT 1
+User Load (1.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) AND (users.activated_at IS NOT NULL) LIMIT 1
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 29) 
+Post Update (3.5ms)  UPDATE "posts" SET "view_count" = COALESCE("view_count", 0) + 1 WHERE ("id" = 29) 
+Completed in 98ms (View: 69, DB: 6) | 200 OK [http://localhost/usr/bob11/posts/29-hello-world-mm8/update_views]
+
+
+Processing PostsController#pkey_show (for 127.0.0.1 at 2009-11-22 17:56:22) [GET]
+  Parameters: {"pkey"=>["mm8"]}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+Post Load (0.8ms)  SELECT * FROM "posts" WHERE ("posts"."pkey" IN ('mm8')) LIMIT 1
+User Load (0.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Comment Load (0.6ms)  SELECT * FROM "comments" WHERE ("comments".commentable_id = 29 AND "comments".commentable_type = 'Post') ORDER BY created_at DESC LIMIT 20
+Post Load (0.9ms)  SELECT * FROM "posts" WHERE ("posts".user_id = 1 AND (published_at < '2009-11-23 01:56:09' and published_as = 'live')) ORDER BY published_at DESC, published_at desc LIMIT 1
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts".user_id = 1 AND (published_at > '2009-11-23 01:56:09' and published_as = 'live')) ORDER BY published_at ASC, published_at desc LIMIT 1
+Post Load (2.2ms)  SELECT * FROM "posts" WHERE ("posts".user_id = 1) AND (published_as = 'live') ORDER BY view_count DESC, published_at desc LIMIT 10
+Tag Load (0.2ms)  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 29) AND ("taggings".taggable_type = 'Post')) 
+Post Load (1.3ms)  SELECT posts.*, count(*) as comments_count FROM "posts" LEFT JOIN comments ON comments.commentable_id = posts.id WHERE (comments.commentable_type = 'Post' AND posts.published_at > '2009-11-16 01:56:22') AND (published_as = 'live') GROUP BY posts.id,posts.created_at,posts.updated_at,posts.raw_post,posts.post,posts.title,posts.category_id,posts.user_id,posts.view_count,posts.contest_id,posts.emailed_count,posts.favorited_count,posts.published_as,posts.published_at,posts.pkey ORDER BY comments_count DESC LIMIT 10
+Rendering template within layouts/application
+Rendering posts/pkey_show
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 29 AND "comments".commentable_type = 'Post') 
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "polls" WHERE ("polls".post_id = 29) 
+Rendered shared/_box (0.4ms)
+Rendered comments/_comment_form (3.8ms)
+Rendered shared/_box (0.3ms)
+Photo Load (0.5ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 1) 
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "posts" WHERE ("posts".user_id = 1) 
+CACHE (0.0ms)  SELECT count(*) AS count_all FROM "posts" WHERE ("posts".user_id = 1) 
+Rendered shared/_box (0.3ms)
+Rendered posts/_author_profile (10.2ms)
+Rendered shared/_box (0.2ms)
+Rendered shared/_scripts_and_styles (2.4ms)
+Role Load (0.4ms)  SELECT * FROM "roles" 
+Rendered shared/_user_menu (115.2ms)
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "messages" WHERE (recipient_id = 1 AND recipient_deleted = 'f' AND read_at IS NULL) 
+Category Load (0.2ms)  SELECT * FROM "categories" 
+Rendered shared/_header (154.1ms)
+Rendered shared/_messages (0.2ms)
+Page Load (0.5ms)  SELECT * FROM "pages" WHERE (published_as = 'live') 
+Completed in 538ms (View: 300, DB: 11) | 200 OK [http://localhost/mm8]
+
+
+Processing PostsController#update_views (for 127.0.0.1 at 2009-11-22 17:56:24) [PUT]
+  Parameters: {"authenticity_token"=>"7k21AtdHcsms8hJAO1n4jE/3l9eGZjJQyV9hScaDl3Q=", "id"=>"29-hello-world-mm8", "user_id"=>"bob11"}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+User Load (1.3ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) AND (users.activated_at IS NOT NULL) LIMIT 1
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) AND (users.activated_at IS NOT NULL) LIMIT 1
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 29) 
+Completed in 100ms (View: 67, DB: 3) | 200 OK [http://localhost/usr/bob11/posts/29-hello-world-mm8/update_views]
+
+
+Processing PostsController#pkey_show (for 127.0.0.1 at 2009-11-22 17:56:31) [GET]
+  Parameters: {"pkey"=>["fastCAR"]}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+Post Load (0.8ms)  SELECT * FROM "posts" WHERE ("posts"."pkey" IN ('fastCAR')) LIMIT 1
+User Load (0.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Comment Load (0.6ms)  SELECT * FROM "comments" WHERE ("comments".commentable_id = 24 AND "comments".commentable_type = 'Post') ORDER BY created_at DESC LIMIT 20
+Post Load (1.1ms)  SELECT * FROM "posts" WHERE ("posts".user_id = 1 AND (published_at < '2009-11-22 03:00:46' and published_as = 'live')) ORDER BY published_at DESC, published_at desc LIMIT 1
+Post Load (0.8ms)  SELECT * FROM "posts" WHERE ("posts".user_id = 1 AND (published_at > '2009-11-22 03:00:46' and published_as = 'live')) ORDER BY published_at ASC, published_at desc LIMIT 1
+Post Load (2.2ms)  SELECT * FROM "posts" WHERE ("posts".user_id = 1) AND (published_as = 'live') ORDER BY view_count DESC, published_at desc LIMIT 10
+Tag Load (0.4ms)  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 24) AND ("taggings".taggable_type = 'Post')) 
+Post Load (1.0ms)  SELECT DISTINCT posts.* FROM "posts" INNER JOIN taggings posts_taggings ON posts_taggings.taggable_id = posts.id AND posts_taggings.taggable_type = 'Post' INNER JOIN tags posts_tags ON posts_tags.id = posts_taggings.tag_id WHERE (posts.id != 24 AND published_as = 'live' AND (posts_tags.name LIKE 'jetcar saltflats')) AND (published_as = 'live') ORDER BY published_at DESC LIMIT 8
+Post Load (1.1ms)  SELECT posts.*, count(*) as comments_count FROM "posts" LEFT JOIN comments ON comments.commentable_id = posts.id WHERE (comments.commentable_type = 'Post' AND posts.published_at > '2009-11-16 01:56:31') AND (published_as = 'live') GROUP BY posts.id,posts.created_at,posts.updated_at,posts.raw_post,posts.post,posts.title,posts.category_id,posts.user_id,posts.view_count,posts.contest_id,posts.emailed_count,posts.favorited_count,posts.published_as,posts.published_at,posts.pkey ORDER BY comments_count DESC LIMIT 10
+Rendering template within layouts/application
+Rendering posts/pkey_show
+SQL (0.4ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 24 AND "comments".commentable_type = 'Post') 
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "polls" WHERE ("polls".post_id = 24) 
+Rendered shared/_box (0.4ms)
+Rendered comments/_comment_form (3.9ms)
+Rendered shared/_box (0.3ms)
+Photo Load (0.4ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 1) 
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "posts" WHERE ("posts".user_id = 1) 
+CACHE (0.0ms)  SELECT count(*) AS count_all FROM "posts" WHERE ("posts".user_id = 1) 
+Rendered shared/_box (0.4ms)
+Rendered posts/_author_profile (10.5ms)
+Rendered shared/_box (0.3ms)
+Rendered shared/_scripts_and_styles (2.5ms)
+Role Load (1.2ms)  SELECT * FROM "roles" 
+Rendered shared/_user_menu (21.7ms)
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "messages" WHERE (recipient_id = 1 AND recipient_deleted = 'f' AND read_at IS NULL) 
+Category Load (0.2ms)  SELECT * FROM "categories" 
+Rendered shared/_header (59.5ms)
+Rendered shared/_messages (0.2ms)
+Page Load (0.5ms)  SELECT * FROM "pages" WHERE (published_as = 'live') 
+Completed in 633ms (View: 387, DB: 13) | 200 OK [http://localhost/fastCAR]
+
+
+Processing PostsController#update_views (for 127.0.0.1 at 2009-11-22 17:56:33) [PUT]
+  Parameters: {"authenticity_token"=>"7k21AtdHcsms8hJAO1n4jE/3l9eGZjJQyV9hScaDl3Q=", "id"=>"24-fast-car", "user_id"=>"bob11"}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+User Load (1.3ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) AND (users.activated_at IS NOT NULL) LIMIT 1
+User Load (0.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) AND (users.activated_at IS NOT NULL) LIMIT 1
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 24) 
+Post Update (3.6ms)  UPDATE "posts" SET "view_count" = COALESCE("view_count", 0) + 1 WHERE ("id" = 24) 
+Completed in 95ms (View: 66, DB: 6) | 200 OK [http://localhost/usr/bob11/posts/24-fast-car/update_views]
+
+
+Processing PostsController#prompt4post (for 127.0.0.1 at 2009-11-22 17:56:46) [GET]
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+Rendering template within layouts/application
+Rendering posts/prompt4post
+Rendered shared/_scripts_and_styles (2.6ms)
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Role Load (0.4ms)  SELECT * FROM "roles" 
+Rendered shared/_user_menu (26.6ms)
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "messages" WHERE (recipient_id = 1 AND recipient_deleted = 'f' AND read_at IS NULL) 
+Category Load (0.2ms)  SELECT * FROM "categories" 
+Rendered shared/_header (163.9ms)
+Rendered shared/_messages (0.2ms)
+Page Load (0.5ms)  SELECT * FROM "pages" WHERE (published_as = 'live') 
+Completed in 269ms (View: 259, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing BaseController#footer_content (for 127.0.0.1 at 2009-11-22 17:56:47) [POST]
+  Parameters: {"authenticity_token"=>"7k21AtdHcsms8hJAO1n4jE/3l9eGZjJQyV9hScaDl3Q="}
+User Load (0.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+Clipping Load (0.3ms)  SELECT * FROM "clippings" WHERE (created_at > '2009-11-16 01:56:47') ORDER BY created_at DESC LIMIT 10
+Photo Load (2.6ms)  SELECT * FROM "photos" WHERE (photos.created_at > '2009-11-16 01:56:47' AND photos.parent_id IS NULL) ORDER BY photos.created_at DESC LIMIT 10
+Comment Load (1.4ms)  SELECT * FROM "comments" WHERE (created_at > '2009-11-09 01:56:47') ORDER BY created_at DESC LIMIT 13
+Tag Load (1.4ms)  SELECT tags.id, tags.name, count(*) AS count 
+ FROM taggings, tags 
+ WHERE tags.id = taggings.tag_id GROUP BY tags.id, tags.name ORDER BY count DESC LIMIT 30
+SQL (0.3ms)  SELECT count(activities.id) AS count_activities_id FROM "activities" 
+Activity Load (1.4ms)  SELECT * FROM "activities" ORDER BY activities.created_at DESC LIMIT 15 OFFSET 0
+Role Load (0.4ms)  SELECT * FROM "roles" 
+User Load (90.3ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.7ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 29) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (125.5ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (2.8ms)
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Post Load (0.4ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 28) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Rendered activities/_activity (5.0ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Photo Load (0.5ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 49) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Rendered activities/_activity (10.3ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Photo Load (0.5ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 45) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Rendered activities/_activity (3.8ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Rendered activities/_activity (1.7ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 27) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.5ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Photo Load (0.5ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 41) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.6ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 26) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.5ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 25) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.4ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Photo Load (0.4ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 37) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.1ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 24) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.6ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Photo Load (0.5ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 33) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.4ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.4ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 23) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.3ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Photo Load (0.4ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 29) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.3ms)
+Rendered shared/_box (0.5ms)
+Rendered shared/_box (0.2ms)
+Rendered shared/_footer_content (203.4ms)
+Completed in 363ms (View: 166, DB: 106) | 200 OK [http://localhost/base/footer_content]
+
+
+Processing ActivitiesController#destroy (for 127.0.0.1 at 2009-11-22 17:57:24) [DELETE]
+  Parameters: {"authenticity_token"=>"7k21AtdHcsms8hJAO1n4jE/3l9eGZjJQyV9hScaDl3Q=", "id"=>"56"}
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+Activity Load (0.3ms)  SELECT * FROM "activities" WHERE ("activities"."id" = 56) 
+Role Load (0.4ms)  SELECT * FROM "roles" 
+CACHE (0.0ms)  SELECT * FROM "activities" WHERE ("activities"."id" = 56) 
+Activity Destroy (0.4ms)  DELETE FROM "activities" WHERE "id" = 56
+Rendering activities/destroy
+Completed in 97ms (View: 31, DB: 2) | 200 OK [http://localhost/activities/56]
+
+
+Processing ActivitiesController#destroy (for 127.0.0.1 at 2009-11-22 17:57:37) [DELETE]
+  Parameters: {"authenticity_token"=>"7k21AtdHcsms8hJAO1n4jE/3l9eGZjJQyV9hScaDl3Q=", "id"=>"70"}
+User Load (0.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+Activity Load (0.3ms)  SELECT * FROM "activities" WHERE ("activities"."id" = 70) 
+Role Load (0.4ms)  SELECT * FROM "roles" 
+CACHE (0.0ms)  SELECT * FROM "activities" WHERE ("activities"."id" = 70) 
+Activity Destroy (0.4ms)  DELETE FROM "activities" WHERE "id" = 70
+Rendering activities/destroy
+Completed in 68ms (View: 1, DB: 2) | 200 OK [http://localhost/activities/70]
+
+
+Processing PostsController#pkey_show (for 127.0.0.1 at 2009-11-22 17:57:45) [GET]
+  Parameters: {"pkey"=>["mm8"]}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+Post Load (0.9ms)  SELECT * FROM "posts" WHERE ("posts"."pkey" IN ('mm8')) LIMIT 1
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Comment Load (0.6ms)  SELECT * FROM "comments" WHERE ("comments".commentable_id = 29 AND "comments".commentable_type = 'Post') ORDER BY created_at DESC LIMIT 20
+Post Load (1.0ms)  SELECT * FROM "posts" WHERE ("posts".user_id = 1 AND (published_at < '2009-11-23 01:56:09' and published_as = 'live')) ORDER BY published_at DESC, published_at desc LIMIT 1
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts".user_id = 1 AND (published_at > '2009-11-23 01:56:09' and published_as = 'live')) ORDER BY published_at ASC, published_at desc LIMIT 1
+Post Load (2.2ms)  SELECT * FROM "posts" WHERE ("posts".user_id = 1) AND (published_as = 'live') ORDER BY view_count DESC, published_at desc LIMIT 10
+Tag Load (0.2ms)  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 29) AND ("taggings".taggable_type = 'Post')) 
+Post Load (1.2ms)  SELECT posts.*, count(*) as comments_count FROM "posts" LEFT JOIN comments ON comments.commentable_id = posts.id WHERE (comments.commentable_type = 'Post' AND posts.published_at > '2009-11-16 01:57:45') AND (published_as = 'live') GROUP BY posts.id,posts.created_at,posts.updated_at,posts.raw_post,posts.post,posts.title,posts.category_id,posts.user_id,posts.view_count,posts.contest_id,posts.emailed_count,posts.favorited_count,posts.published_as,posts.published_at,posts.pkey ORDER BY comments_count DESC LIMIT 10
+Rendering template within layouts/application
+Rendering posts/pkey_show
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 29 AND "comments".commentable_type = 'Post') 
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "polls" WHERE ("polls".post_id = 29) 
+Rendered shared/_box (0.4ms)
+Rendered comments/_comment_form (3.9ms)
+Rendered shared/_box (0.3ms)
+Photo Load (0.5ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 1) 
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "posts" WHERE ("posts".user_id = 1) 
+CACHE (0.0ms)  SELECT count(*) AS count_all FROM "posts" WHERE ("posts".user_id = 1) 
+Rendered shared/_box (0.3ms)
+Rendered posts/_author_profile (10.0ms)
+Rendered shared/_box (0.2ms)
+Rendered shared/_scripts_and_styles (2.4ms)
+Role Load (0.4ms)  SELECT * FROM "roles" 
+Rendered shared/_user_menu (21.3ms)
+SQL (0.4ms)  SELECT count(*) AS count_all FROM "messages" WHERE (recipient_id = 1 AND recipient_deleted = 'f' AND read_at IS NULL) 
+Category Load (0.2ms)  SELECT * FROM "categories" 
+Rendered shared/_header (153.7ms)
+Rendered shared/_messages (0.2ms)
+Page Load (0.6ms)  SELECT * FROM "pages" WHERE (published_as = 'live') 
+Completed in 540ms (View: 298, DB: 11) | 200 OK [http://localhost/mm8]
+
+
+Processing PostsController#update_views (for 127.0.0.1 at 2009-11-22 17:57:47) [PUT]
+  Parameters: {"authenticity_token"=>"7k21AtdHcsms8hJAO1n4jE/3l9eGZjJQyV9hScaDl3Q=", "id"=>"29-hello-world-mm8", "user_id"=>"bob11"}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+User Load (3.3ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) AND (users.activated_at IS NOT NULL) LIMIT 1
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) AND (users.activated_at IS NOT NULL) LIMIT 1
+Post Load (0.4ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 29) 
+Completed in 91ms (View: 63, DB: 5) | 200 OK [http://localhost/usr/bob11/posts/29-hello-world-mm8/update_views]
+
+
+Processing PostsController#destroy (for 127.0.0.1 at 2009-11-22 17:57:59) [DELETE]
+  Parameters: {"authenticity_token"=>"7k21AtdHcsms8hJAO1n4jE/3l9eGZjJQyV9hScaDl3Q=", "id"=>"29-hello-world-mm8", "user_id"=>"bob11"}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+User Load (1.1ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) LIMIT 1
+Post Load (0.4ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 29) 
+Role Load (0.4ms)  SELECT * FROM "roles" 
+User Load (0.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) LIMIT 1
+CACHE (0.0ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 29) 
+Comment Load (0.3ms)  SELECT * FROM "comments" WHERE ("comments".commentable_id = 29 AND "comments".commentable_type = 'Post') 
+Tagging Load (0.2ms)  SELECT * FROM "taggings" WHERE ("taggings".taggable_id = 29 AND "taggings".taggable_type = 'Post') 
+Activity Load (0.2ms)  SELECT * FROM "activities" WHERE ("activities".item_id = 29 AND "activities".item_type = 'Post') 
+Poll Load (0.2ms)  SELECT * FROM "polls" WHERE ("polls".post_id = 29) 
+Favorite Load (0.2ms)  SELECT * FROM "favorites" WHERE ("favorites".favoritable_id = 29 AND "favorites".favoritable_type = 'Post') 
+Post Destroy (0.5ms)  DELETE FROM "posts" WHERE "id" = 29
+Tag Load (0.2ms)  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 29) AND ("taggings".taggable_type = 'Post')) 
+Redirected to http://localhost:3000/usr/bob11/posts/manage
+Completed in 453ms (DB: 5) | 302 Found [http://localhost/usr/bob11/posts/29-hello-world-mm8]
+
+
+Processing PostsController#manage (for 127.0.0.1 at 2009-11-22 17:58:01) [GET]
+  Parameters: {"user_id"=>"bob11"}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+User Load (0.9ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+User Load (1.3ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) AND (users.activated_at IS NOT NULL) LIMIT 1
+Role Load (0.4ms)  SELECT * FROM "roles" 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) AND (users.activated_at IS NOT NULL) LIMIT 1
+SQL (0.3ms)  SELECT count(posts.id) AS count_posts_id FROM "posts" WHERE ("posts".user_id = 1) 
+Rendering template within layouts/application
+Rendering posts/manage
+Rendered shared/_box (0.3ms)
+Post Load (2.7ms)  SELECT * FROM "posts" WHERE ("posts".user_id = 1) ORDER BY created_at DESC, published_at desc LIMIT 10 OFFSET 0
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 27) AND ("taggings".taggable_type = 'Post')) 
+Tag Load (0.3ms)  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 27) AND ("taggings".taggable_type = 'Post')) 
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 27 AND "comments".commentable_type = 'Post') 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 26) AND ("taggings".taggable_type = 'Post')) 
+Tag Load (0.3ms)  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 26) AND ("taggings".taggable_type = 'Post')) 
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 26 AND "comments".commentable_type = 'Post') 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 25) AND ("taggings".taggable_type = 'Post')) 
+Tag Load (0.2ms)  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 25) AND ("taggings".taggable_type = 'Post')) 
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 25 AND "comments".commentable_type = 'Post') 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 24) AND ("taggings".taggable_type = 'Post')) 
+Tag Load (0.2ms)  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 24) AND ("taggings".taggable_type = 'Post')) 
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 24 AND "comments".commentable_type = 'Post') 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 23) AND ("taggings".taggable_type = 'Post')) 
+Tag Load (0.2ms)  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 23) AND ("taggings".taggable_type = 'Post')) 
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 23 AND "comments".commentable_type = 'Post') 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 9) AND ("taggings".taggable_type = 'Post')) 
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 9 AND "comments".commentable_type = 'Post') 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 8) AND ("taggings".taggable_type = 'Post')) 
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 8 AND "comments".commentable_type = 'Post') 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 7) AND ("taggings".taggable_type = 'Post')) 
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 7 AND "comments".commentable_type = 'Post') 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'Post')) 
+Tag Load (0.2ms)  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'Post')) 
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 2 AND "comments".commentable_type = 'Post') 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'Post')) 
+Tag Load (0.2ms)  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'Post')) 
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Post') 
+Rendered shared/_box (0.5ms)
+Rendered shared/_scripts_and_styles (2.5ms)
+Rendered shared/_user_menu (1.9ms)
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "messages" WHERE (recipient_id = 1 AND recipient_deleted = 'f' AND read_at IS NULL) 
+Category Load (0.2ms)  SELECT * FROM "categories" 
+Rendered shared/_header (133.6ms)
+Rendered shared/_messages (0.4ms)
+Page Load (0.5ms)  SELECT * FROM "pages" WHERE (published_as = 'live') 
+Completed in 596ms (View: 532, DB: 14) | 200 OK [http://localhost/usr/bob11/posts/manage]
+
+
+Processing PostsController#pkey_show (for 127.0.0.1 at 2009-11-22 17:58:16) [GET]
+  Parameters: {"pkey"=>["bkt"]}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+Post Load (0.9ms)  SELECT * FROM "posts" WHERE ("posts"."pkey" IN ('bkt')) LIMIT 1
+User Load (1.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+User Load (0.9ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Comment Load (0.8ms)  SELECT * FROM "comments" WHERE ("comments".commentable_id = 27 AND "comments".commentable_type = 'Post') ORDER BY created_at DESC LIMIT 20
+Post Load (1.0ms)  SELECT * FROM "posts" WHERE ("posts".user_id = 1 AND (published_at < '2009-11-22 09:55:23' and published_as = 'live')) ORDER BY published_at DESC, published_at desc LIMIT 1
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts".user_id = 1 AND (published_at > '2009-11-22 09:55:23' and published_as = 'live')) ORDER BY published_at ASC, published_at desc LIMIT 1
+Post Load (2.1ms)  SELECT * FROM "posts" WHERE ("posts".user_id = 1) AND (published_as = 'live') ORDER BY view_count DESC, published_at desc LIMIT 10
+Tag Load (0.4ms)  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 27) AND ("taggings".taggable_type = 'Post')) 
+Post Load (1.2ms)  SELECT DISTINCT posts.* FROM "posts" INNER JOIN taggings posts_taggings ON posts_taggings.taggable_id = posts.id AND posts_taggings.taggable_type = 'Post' INNER JOIN tags posts_tags ON posts_tags.id = posts_taggings.tag_id WHERE (posts.id != 27 AND published_as = 'live' AND (posts_tags.name LIKE 'jet car')) AND (published_as = 'live') ORDER BY published_at DESC LIMIT 8
+Post Load (1.9ms)  SELECT posts.*, count(*) as comments_count FROM "posts" LEFT JOIN comments ON comments.commentable_id = posts.id WHERE (comments.commentable_type = 'Post' AND posts.published_at > '2009-11-16 01:58:17') AND (published_as = 'live') GROUP BY posts.id,posts.created_at,posts.updated_at,posts.raw_post,posts.post,posts.title,posts.category_id,posts.user_id,posts.view_count,posts.contest_id,posts.emailed_count,posts.favorited_count,posts.published_as,posts.published_at,posts.pkey ORDER BY comments_count DESC LIMIT 10
+Rendering template within layouts/application
+Rendering posts/pkey_show
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 27 AND "comments".commentable_type = 'Post') 
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "polls" WHERE ("polls".post_id = 27) 
+Rendered shared/_box (0.4ms)
+Rendered comments/_comment_form (9.2ms)
+Rendered shared/_box (0.3ms)
+Photo Load (0.5ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 1) 
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "posts" WHERE ("posts".user_id = 1) 
+CACHE (0.0ms)  SELECT count(*) AS count_all FROM "posts" WHERE ("posts".user_id = 1) 
+Rendered shared/_box (0.3ms)
+Rendered posts/_author_profile (18.0ms)
+Rendered shared/_box (0.3ms)
+Rendered shared/_scripts_and_styles (2.8ms)
+Role Load (0.4ms)  SELECT * FROM "roles" 
+Rendered shared/_user_menu (22.2ms)
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "messages" WHERE (recipient_id = 1 AND recipient_deleted = 'f' AND read_at IS NULL) 
+Category Load (0.2ms)  SELECT * FROM "categories" 
+Rendered shared/_header (162.5ms)
+Rendered shared/_messages (0.2ms)
+Page Load (0.5ms)  SELECT * FROM "pages" WHERE (published_as = 'live') 
+Completed in 595ms (View: 332, DB: 14) | 200 OK [http://localhost/bkt]
+
+
+Processing PostsController#update_views (for 127.0.0.1 at 2009-11-22 17:58:18) [PUT]
+  Parameters: {"authenticity_token"=>"7k21AtdHcsms8hJAO1n4jE/3l9eGZjJQyV9hScaDl3Q=", "id"=>"27-bkt-phto", "user_id"=>"bob11"}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+User Load (1.4ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) AND (users.activated_at IS NOT NULL) LIMIT 1
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) AND (users.activated_at IS NOT NULL) LIMIT 1
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 27) 
+Post Update (3.7ms)  UPDATE "posts" SET "view_count" = COALESCE("view_count", 0) + 1 WHERE ("id" = 27) 
+Completed in 97ms (View: 65, DB: 6) | 200 OK [http://localhost/usr/bob11/posts/27-bkt-phto/update_views]
+
+
+Processing PostsController#index to rss (for 127.0.0.1 at 2009-11-22 17:58:48) [GET]
+  Parameters: {"user_id"=>"bob11"}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+User Load (1.1ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) AND (users.activated_at IS NOT NULL) LIMIT 1
+User Load (0.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) AND (users.activated_at IS NOT NULL) LIMIT 1
+User Load (2.6ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) LIMIT 1
+SQL (0.3ms)  SELECT count(posts.id) AS count_posts_id FROM "posts" WHERE ("posts".user_id = 1) AND (("posts".user_id = 1) AND (published_as = 'live')) 
+Post Load (2.4ms)  SELECT * FROM "posts" WHERE ("posts".user_id = 1) AND (published_as = 'live') ORDER BY view_count DESC, published_at desc LIMIT 10
+Post Load (2.4ms)  SELECT * FROM "posts" WHERE ("posts".user_id = 1) AND (("posts".user_id = 1) AND (published_as = 'live')) ORDER BY published_at desc LIMIT 10 OFFSET 0
+CACHE (0.0ms)  SELECT * FROM "posts" WHERE ("posts".user_id = 1) AND (("posts".user_id = 1) AND (published_as = 'live')) ORDER BY published_at desc LIMIT 10 OFFSET 0
+CACHE (0.0ms)  SELECT * FROM "posts" WHERE ("posts".user_id = 1) AND (("posts".user_id = 1) AND (published_as = 'live')) ORDER BY published_at desc LIMIT 10 OFFSET 0
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Completed in 228ms (View: 67, DB: 10) | 200 OK [http://localhost/usr/bob11/posts.rss]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-11-22 17:59:29) [GET]
+  Parameters: {"id"=>"27-bkt-phto", "user_id"=>"bob11"}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+User Load (1.2ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) AND (users.activated_at IS NOT NULL) LIMIT 1
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) AND (users.activated_at IS NOT NULL) LIMIT 1
+Post Load (0.6ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 27) 
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Comment Load (0.7ms)  SELECT * FROM "comments" WHERE ("comments".commentable_id = 27 AND "comments".commentable_type = 'Post') ORDER BY created_at DESC LIMIT 20
+Post Load (1.1ms)  SELECT * FROM "posts" WHERE ("posts".user_id = 1 AND (published_at < '2009-11-22 09:55:23' and published_as = 'live')) ORDER BY published_at DESC, published_at desc LIMIT 1
+Post Load (0.6ms)  SELECT * FROM "posts" WHERE ("posts".user_id = 1 AND (published_at > '2009-11-22 09:55:23' and published_as = 'live')) ORDER BY published_at ASC, published_at desc LIMIT 1
+Post Load (2.4ms)  SELECT * FROM "posts" WHERE ("posts".user_id = 1) AND (published_as = 'live') ORDER BY view_count DESC, published_at desc LIMIT 10
+Tag Load (0.3ms)  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 27) AND ("taggings".taggable_type = 'Post')) 
+Post Load (1.0ms)  SELECT DISTINCT posts.* FROM "posts" INNER JOIN taggings posts_taggings ON posts_taggings.taggable_id = posts.id AND posts_taggings.taggable_type = 'Post' INNER JOIN tags posts_tags ON posts_tags.id = posts_taggings.tag_id WHERE (posts.id != 27 AND published_as = 'live' AND (posts_tags.name LIKE 'jet car')) AND (published_as = 'live') ORDER BY published_at DESC LIMIT 8
+Post Load (1.3ms)  SELECT posts.*, count(*) as comments_count FROM "posts" LEFT JOIN comments ON comments.commentable_id = posts.id WHERE (comments.commentable_type = 'Post' AND posts.published_at > '2009-11-16 01:59:30') AND (published_as = 'live') GROUP BY posts.id,posts.created_at,posts.updated_at,posts.raw_post,posts.post,posts.title,posts.category_id,posts.user_id,posts.view_count,posts.contest_id,posts.emailed_count,posts.favorited_count,posts.published_as,posts.published_at,posts.pkey ORDER BY comments_count DESC LIMIT 10
+Rendering template within layouts/application
+Rendering posts/show
+SQL (0.4ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 27 AND "comments".commentable_type = 'Post') 
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "polls" WHERE ("polls".post_id = 27) 
+Rendered shared/_box (0.4ms)
+Rendered comments/_comment_form (3.8ms)
+Rendered shared/_box (0.3ms)
+Photo Load (0.4ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 1) 
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "posts" WHERE ("posts".user_id = 1) 
+CACHE (0.0ms)  SELECT count(*) AS count_all FROM "posts" WHERE ("posts".user_id = 1) 
+Rendered shared/_box (0.3ms)
+Rendered posts/_author_profile (10.4ms)
+Rendered shared/_box (0.3ms)
+Rendered shared/_scripts_and_styles (3.3ms)
+Role Load (0.4ms)  SELECT * FROM "roles" 
+Rendered shared/_user_menu (19.6ms)
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "messages" WHERE (recipient_id = 1 AND recipient_deleted = 'f' AND read_at IS NULL) 
+Category Load (0.2ms)  SELECT * FROM "categories" 
+Rendered shared/_header (159.6ms)
+Rendered shared/_messages (0.3ms)
+Page Load (0.5ms)  SELECT * FROM "pages" WHERE (published_as = 'live') 
+Completed in 617ms (View: 362, DB: 13) | 200 OK [http://localhost/usr/bob11/posts/27-bkt-phto]
+
+
+Processing PostsController#update_views (for 127.0.0.1 at 2009-11-22 17:59:31) [PUT]
+  Parameters: {"authenticity_token"=>"7k21AtdHcsms8hJAO1n4jE/3l9eGZjJQyV9hScaDl3Q=", "id"=>"27-bkt-phto", "user_id"=>"bob11"}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+User Load (1.2ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) AND (users.activated_at IS NOT NULL) LIMIT 1
+User Load (1.2ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) AND (users.activated_at IS NOT NULL) LIMIT 1
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 27) 
+Completed in 140ms (View: 92, DB: 3) | 200 OK [http://localhost/usr/bob11/posts/27-bkt-phto/update_views]
+
+
+Processing BaseController#footer_content (for 127.0.0.1 at 2009-11-22 17:59:32) [POST]
+  Parameters: {"authenticity_token"=>"7k21AtdHcsms8hJAO1n4jE/3l9eGZjJQyV9hScaDl3Q="}
+User Load (0.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+Clipping Load (0.3ms)  SELECT * FROM "clippings" WHERE (created_at > '2009-11-16 01:59:32') ORDER BY created_at DESC LIMIT 10
+Photo Load (2.3ms)  SELECT * FROM "photos" WHERE (photos.created_at > '2009-11-16 01:59:32' AND photos.parent_id IS NULL) ORDER BY photos.created_at DESC LIMIT 10
+Comment Load (1.3ms)  SELECT * FROM "comments" WHERE (created_at > '2009-11-09 01:59:32') ORDER BY created_at DESC LIMIT 13
+Tag Load (1.4ms)  SELECT tags.id, tags.name, count(*) AS count 
+ FROM taggings, tags 
+ WHERE tags.id = taggings.tag_id GROUP BY tags.id, tags.name ORDER BY count DESC LIMIT 30
+SQL (0.3ms)  SELECT count(activities.id) AS count_activities_id FROM "activities" 
+Activity Load (1.4ms)  SELECT * FROM "activities" ORDER BY activities.created_at DESC LIMIT 15 OFFSET 0
+Role Load (0.4ms)  SELECT * FROM "roles" 
+User Load (0.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (23.5ms)
+User Load (0.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Post Load (0.4ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 28) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Rendered activities/_activity (9.6ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Photo Load (0.6ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 49) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Rendered activities/_activity (10.1ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Photo Load (0.5ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 45) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Rendered activities/_activity (3.5ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 2) 
+Rendered activities/_activity (1.5ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 27) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.0ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Photo Load (0.4ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 41) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (3.9ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.4ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 26) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.1ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.4ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 25) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.1ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Photo Load (0.4ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 37) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.3ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 24) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.0ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Photo Load (0.4ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 33) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (3.9ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 23) 
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (4.2ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Comment Load (0.4ms)  SELECT * FROM "comments" WHERE ("comments"."id" = 7) 
+User Load (0.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 3) 
+Post Load (0.4ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 22) 
+Rendered activities/_activity (10.6ms)
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered activities/_activity (2.1ms)
+Rendered shared/_box (0.5ms)
+Rendered shared/_box (0.2ms)
+Rendered shared/_footer_content (106.2ms)
+Completed in 356ms (View: 161, DB: 16) | 200 OK [http://localhost/base/footer_content]
+
+
+Processing TagsController#show (for 127.0.0.1 at 2009-11-22 17:59:41) [GET]
+  Parameters: {"id"=>"jet car"}
+User Load (0.9ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+Tag Load (0.8ms)  SELECT * FROM "tags" WHERE (name IN ('jet car')) 
+Tagging Load (0.3ms)  SELECT * FROM "taggings" WHERE ("taggings".tag_id = 12) LIMIT 10
+Tag Load (0.9ms)  SELECT tags.id, tags.name, count(*) AS count FROM tags
+ LEFT OUTER JOIN taggings
+ ON taggings.tag_id = tags.id
+ WHERE (taggings.taggable_id IN (27))
+ AND tags.id != '12'
+ GROUP BY tags.id, tags.name
+ ORDER BY count DESC
+ LIMIT 10
+Post Load (1.4ms)  SELECT DISTINCT posts.* FROM "posts" INNER JOIN taggings posts_taggings ON posts_taggings.taggable_id = posts.id AND posts_taggings.taggable_type = 'Post' INNER JOIN tags posts_tags ON posts_tags.id = posts_taggings.tag_id WHERE ( (SELECT COUNT(*) FROM taggings
+ INNER JOIN tags ON taggings.tag_id = tags.id
+ WHERE taggings.taggable_type = 'Post' AND
+ taggable_id = posts.id AND
+ (tags.name LIKE 'jet car')) = 1
+) AND (published_as = 'live') ORDER BY posts.published_at DESC LIMIT 5
+Photo Load (1.1ms)  SELECT DISTINCT photos.* FROM "photos" INNER JOIN taggings photos_taggings ON photos_taggings.taggable_id = photos.id AND photos_taggings.taggable_type = 'Photo' INNER JOIN tags photos_tags ON photos_tags.id = photos_taggings.tag_id WHERE ( (SELECT COUNT(*) FROM taggings
+ INNER JOIN tags ON taggings.tag_id = tags.id
+ WHERE taggings.taggable_type = 'Photo' AND
+ taggable_id = photos.id AND
+ (tags.name LIKE 'jet car')) = 1
+) AND (photos.parent_id IS NULL) ORDER BY photos.created_at DESC LIMIT 10
+User Load (1.0ms)  SELECT DISTINCT users.* FROM "users" INNER JOIN taggings users_taggings ON users_taggings.taggable_id = users.id AND users_taggings.taggable_type = 'User' INNER JOIN tags users_tags ON users_tags.id = users_taggings.tag_id WHERE ( (SELECT COUNT(*) FROM taggings
+ INNER JOIN tags ON taggings.tag_id = tags.id
+ WHERE taggings.taggable_type = 'User' AND
+ taggable_id = users.id AND
+ (tags.name LIKE 'jet car')) = 1
+) ORDER BY users.created_at DESC LIMIT 10
+Clipping Load (1.0ms)  SELECT DISTINCT clippings.* FROM "clippings" INNER JOIN taggings clippings_taggings ON clippings_taggings.taggable_id = clippings.id AND clippings_taggings.taggable_type = 'Clipping' INNER JOIN tags clippings_tags ON clippings_tags.id = clippings_taggings.tag_id WHERE ( (SELECT COUNT(*) FROM taggings
+ INNER JOIN tags ON taggings.tag_id = tags.id
+ WHERE taggings.taggable_type = 'Clipping' AND
+ taggable_id = clippings.id AND
+ (tags.name LIKE 'jet car')) = 1
+) ORDER BY clippings.created_at DESC LIMIT 10
+Rendering template within layouts/application
+Rendering tags/show
+Rendered shared/_box (1.9ms)
+Rendered shared/_box (0.3ms)
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+Rendered shared/_box (0.4ms)
+Rendered shared/_scripts_and_styles (2.4ms)
+Role Load (0.4ms)  SELECT * FROM "roles" 
+Rendered shared/_user_menu (22.5ms)
+SQL (0.4ms)  SELECT count(*) AS count_all FROM "messages" WHERE (recipient_id = 1 AND recipient_deleted = 'f' AND read_at IS NULL) 
+Category Load (0.2ms)  SELECT * FROM "categories" 
+Rendered shared/_header (63.7ms)
+Rendered shared/_messages (0.2ms)
+Page Load (0.5ms)  SELECT * FROM "pages" WHERE (published_as = 'live') 
+Completed in 443ms (View: 250, DB: 10) | 200 OK [http://localhost/tags/jet%20car]
+
+
+Processing TagsController#show (for 127.0.0.1 at 2009-11-22 17:59:47) [GET]
+  Parameters: {"id"=>"jet car", "type"=>"Post"}
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+Tag Load (0.7ms)  SELECT * FROM "tags" WHERE (name IN ('jet car')) 
+Tagging Load (0.3ms)  SELECT * FROM "taggings" WHERE ("taggings".tag_id = 12) LIMIT 10
+Tag Load (0.8ms)  SELECT tags.id, tags.name, count(*) AS count FROM tags
+ LEFT OUTER JOIN taggings
+ ON taggings.tag_id = tags.id
+ WHERE (taggings.taggable_id IN (27))
+ AND tags.id != '12'
+ GROUP BY tags.id, tags.name
+ ORDER BY count DESC
+ LIMIT 10
+SQL (0.8ms)  SELECT count(DISTINCT posts.id) AS count_distinct_posts_id FROM "posts" INNER JOIN taggings posts_taggings ON posts_taggings.taggable_id = posts.id AND posts_taggings.taggable_type = 'Post' INNER JOIN tags posts_tags ON posts_tags.id = posts_taggings.tag_id WHERE ( (SELECT COUNT(*) FROM taggings
+ INNER JOIN tags ON taggings.tag_id = tags.id
+ WHERE taggings.taggable_type = 'Post' AND
+ taggable_id = posts.id AND
+ (tags.name LIKE 'jet car')) = 1
+) AND (published_as = 'live') 
+Rendering template within layouts/application
+Rendering tags/show
+Rendered shared/_box (0.3ms)
+Rendered shared/_box (0.2ms)
+Post Load (1.5ms)  SELECT DISTINCT posts.* FROM "posts" INNER JOIN taggings posts_taggings ON posts_taggings.taggable_id = posts.id AND posts_taggings.taggable_type = 'Post' INNER JOIN tags posts_tags ON posts_tags.id = posts_taggings.tag_id WHERE ( (SELECT COUNT(*) FROM taggings
+ INNER JOIN tags ON taggings.tag_id = tags.id
+ WHERE taggings.taggable_type = 'Post' AND
+ taggable_id = posts.id AND
+ (tags.name LIKE 'jet car')) = 1
+) AND (published_as = 'live') ORDER BY posts.published_at DESC LIMIT 1 OFFSET 0
+CACHE (0.0ms)  SELECT DISTINCT posts.* FROM "posts" INNER JOIN taggings posts_taggings ON posts_taggings.taggable_id = posts.id AND posts_taggings.taggable_type = 'Post' INNER JOIN tags posts_tags ON posts_tags.id = posts_taggings.tag_id WHERE ( (SELECT COUNT(*) FROM taggings
+ INNER JOIN tags ON taggings.tag_id = tags.id
+ WHERE taggings.taggable_type = 'Post' AND
+ taggable_id = posts.id AND
+ (tags.name LIKE 'jet car')) = 1
+) AND (published_as = 'live') ORDER BY posts.published_at DESC LIMIT 1 OFFSET 0
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 27 AND "comments".commentable_type = 'Post') 
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "polls" WHERE ("polls".post_id = 27) 
+Rendered posts/_post (284.3ms)
+Rendered shared/_box (0.4ms)
+Rendered shared/_box (0.3ms)
+Rendered shared/_scripts_and_styles (2.6ms)
+Role Load (0.4ms)  SELECT * FROM "roles" 
+Rendered shared/_user_menu (20.5ms)
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "messages" WHERE (recipient_id = 1 AND recipient_deleted = 'f' AND read_at IS NULL) 
+Category Load (0.2ms)  SELECT * FROM "categories" 
+Rendered shared/_header (56.1ms)
+Rendered shared/_messages (0.2ms)
+Page Load (0.5ms)  SELECT * FROM "pages" WHERE (published_as = 'live') 
+Completed in 644ms (View: 455, DB: 7) | 200 OK [http://localhost/tags/jet%20car/Post]
+
+
+Processing PostsController#pkey_show (for 127.0.0.1 at 2009-11-22 17:59:52) [GET]
+  Parameters: {"pkey"=>["bkt"]}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+Post Load (0.9ms)  SELECT * FROM "posts" WHERE ("posts"."pkey" IN ('bkt')) LIMIT 1
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) 
+User Load (0.8ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Comment Load (0.6ms)  SELECT * FROM "comments" WHERE ("comments".commentable_id = 27 AND "comments".commentable_type = 'Post') ORDER BY created_at DESC LIMIT 20
+Post Load (1.0ms)  SELECT * FROM "posts" WHERE ("posts".user_id = 1 AND (published_at < '2009-11-22 09:55:23' and published_as = 'live')) ORDER BY published_at DESC, published_at desc LIMIT 1
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts".user_id = 1 AND (published_at > '2009-11-22 09:55:23' and published_as = 'live')) ORDER BY published_at ASC, published_at desc LIMIT 1
+Post Load (2.2ms)  SELECT * FROM "posts" WHERE ("posts".user_id = 1) AND (published_as = 'live') ORDER BY view_count DESC, published_at desc LIMIT 10
+Tag Load (0.3ms)  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 27) AND ("taggings".taggable_type = 'Post')) 
+Post Load (1.0ms)  SELECT DISTINCT posts.* FROM "posts" INNER JOIN taggings posts_taggings ON posts_taggings.taggable_id = posts.id AND posts_taggings.taggable_type = 'Post' INNER JOIN tags posts_tags ON posts_tags.id = posts_taggings.tag_id WHERE (posts.id != 27 AND published_as = 'live' AND (posts_tags.name LIKE 'jet car')) AND (published_as = 'live') ORDER BY published_at DESC LIMIT 8
+Post Load (1.1ms)  SELECT posts.*, count(*) as comments_count FROM "posts" LEFT JOIN comments ON comments.commentable_id = posts.id WHERE (comments.commentable_type = 'Post' AND posts.published_at > '2009-11-16 01:59:53') AND (published_as = 'live') GROUP BY posts.id,posts.created_at,posts.updated_at,posts.raw_post,posts.post,posts.title,posts.category_id,posts.user_id,posts.view_count,posts.contest_id,posts.emailed_count,posts.favorited_count,posts.published_as,posts.published_at,posts.pkey ORDER BY comments_count DESC LIMIT 10
+Rendering template within layouts/application
+Rendering posts/pkey_show
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 27 AND "comments".commentable_type = 'Post') 
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "polls" WHERE ("polls".post_id = 27) 
+Rendered shared/_box (0.4ms)
+Rendered comments/_comment_form (5.4ms)
+Rendered shared/_box (0.6ms)
+Photo Load (0.4ms)  SELECT * FROM "photos" WHERE ("photos"."id" = 1) 
+SQL (0.3ms)  SELECT count(*) AS count_all FROM "posts" WHERE ("posts".user_id = 1) 
+CACHE (0.0ms)  SELECT count(*) AS count_all FROM "posts" WHERE ("posts".user_id = 1) 
+Rendered shared/_box (0.3ms)
+Rendered posts/_author_profile (11.6ms)
+Rendered shared/_box (0.3ms)
+Rendered shared/_scripts_and_styles (2.6ms)
+Role Load (0.4ms)  SELECT * FROM "roles" 
+Rendered shared/_user_menu (21.1ms)
+SQL (0.2ms)  SELECT count(*) AS count_all FROM "messages" WHERE (recipient_id = 1 AND recipient_deleted = 'f' AND read_at IS NULL) 
+Category Load (0.2ms)  SELECT * FROM "categories" 
+Rendered shared/_header (62.1ms)
+Rendered shared/_messages (0.2ms)
+Page Load (0.5ms)  SELECT * FROM "pages" WHERE (published_as = 'live') 
+Completed in 649ms (View: 401, DB: 12) | 200 OK [http://localhost/bkt]
+
+
+Processing PostsController#update_views (for 127.0.0.1 at 2009-11-22 17:59:55) [PUT]
+  Parameters: {"authenticity_token"=>"7k21AtdHcsms8hJAO1n4jE/3l9eGZjJQyV9hScaDl3Q=", "id"=>"27-bkt-phto", "user_id"=>"bob11"}
+[I18n] loading locale: en from config
+[I18n] Locale set to en
+User Load (1.1ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) AND (users.activated_at IS NOT NULL) LIMIT 1
+User Load (0.7ms)  SELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+CACHE (0.0ms)  SELECT * FROM "users" WHERE ("users"."login_slug" IN ('bob11')) AND (users.activated_at IS NOT NULL) LIMIT 1
+Post Load (0.5ms)  SELECT * FROM "posts" WHERE ("posts"."id" = 27) 
+Completed in 104ms (View: 79, DB: 2) | 200 OK [http://localhost/usr/bob11/posts/27-bkt-phto/update_views]

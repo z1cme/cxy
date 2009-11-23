@@ -29,6 +29,12 @@ class PostsController < BaseController
     4.times { @short_url << chars[rand(chars.size)] }
   end
 
+  # Redirects a user guess from prompt4post
+  def redirect_user_guess
+    redirect_to "/#{params[:a_short_url]}"
+  end
+
+
   def manage
     @posts = @user.posts.find_without_published_as(:all, 
       :page => {:current => params[:page], :size => 10}, 

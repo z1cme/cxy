@@ -28,6 +28,10 @@
           = f.hidden_field :category_id
           = f.hidden_field :contest_id
 
+        The URL of this post will be: 
+        %a{ :href=>"/#{params[:pkey]}"}="http://c1c.me/#{params[:pkey]}"
+        %br/
+
         %label
           pkey
         = f.text_field :pkey, {:value => params[:pkey]}

@@ -1,5 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   map.root :controller => "posts", :action => 'prompt4post', :conditions => { :method => :get }
+  map.connect '/posts/redirect_user_guess', :controller => "posts", :action => 'redirect_user_guess', :conditions => { :method => :get }
   map.routes_from_plugin :community_engine
   map.connect '/posts/pkey_new/:pkey', :controller => 'posts', :action => 'pkey_new', :conditions => { :method => :get }
   map.connect '/users/:action/:id', :controller => 'users'
