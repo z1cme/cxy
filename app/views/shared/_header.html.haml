@@ -20,7 +20,7 @@
       = topnav_tab :people.l, { :url => users_path, :section => 'users' }
       - if current_user 
         = topnav_tab :my_profile.l, { :url => user_path(current_user), :section => 'my_profile'}   
-        = topnav_tab "Write Post", { :url => new_user_post_path({:user_id => current_user}), :section => 'write_post'}
+        = topnav_tab "Write Post", { :url => "/", :section => 'write_post'}
         = topnav_tab "Logout", { :url => "/logout", :section => 'logout'}   
 
     / SiteSearch Google 

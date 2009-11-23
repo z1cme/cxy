@@ -29,9 +29,9 @@ class PostsController < BaseController
     4.times { @short_url << chars[rand(chars.size)] }
   end
 
-  # Redirects a user guess from prompt4post
+  # Redirects a user guess from prompt4post to /smthnShrt
   def redirect_user_guess
-    redirect_to "/#{params[:a_short_url]}"
+    redirect_to "/#{params[:a_short_url][0..8]}"
   end
 
 
