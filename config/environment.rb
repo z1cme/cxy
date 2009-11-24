@@ -9,10 +9,13 @@ require File.join(File.dirname(__FILE__), 'boot')
 
 
 Rails::Initializer.run do |config|
+  # bikle
   # keeps AR messages in my log files and server console more clean
   config.active_record.colorize_logging = false
+  config.gem 'rack', :version => '~> 1.0.1'
+  # bikle
   config.plugins = [:community_engine, :white_list, :all]
-config.plugin_paths += ["#{RAILS_ROOT}/vendor/plugins/community_engine/plugins"]
+  config.plugin_paths += ["#{RAILS_ROOT}/vendor/plugins/community_engine/plugins"]
 
   config.gem 'icalendar'
   config.gem 'calendar_date_select'
