@@ -9,19 +9,27 @@
   .yui-b
     -box :class => 'hfeed' do  
       %h3=:users_blog.l :user=>  @user.login
+
       .hentry.main
         // %h4.entry-title= link_to "#{@post.title} | pkey= #{@post.pkey}", user_post_path(@user, @post), :rel => 'bookmark'
         %h4.entry-title= link_to "#{@post.title} | pkey= #{@post.pkey}", "/#{@post.pkey}", :rel => 'bookmark'
         // bikle 2009-11-24
         .pkey-show
           = @post.post
+          %hr/
+          -if @is_current_user || admin? || moderator?
+            = link_to :edit.l, edit_user_post_path(@post.user, @post)
+            or ...
+            = link_to :delete.l, user_post_path(@post.user, @post), {:method => :delete, :confirm => :permanently_delete_this_post.l}
+            This post
+            %hr/
           = render :partial => 'polls/poll_ui', :locals => {:poll => @post.polls.first} unless @post.polls.empty?
           - unless @post.tags.empty?
             %ul.tags
               - @post.tags.each do |t|
                 %li=link_to( t.name, tag_url(t), :rel => 'tag')
-        / entry-content
-      / ends hentry
+          // pkey-show
+      // ends hentry
     -box :class => 'hfeed comments', :id => 'comments' do      
       %h3= :post_comments.l 
       %h2= :add_your_comment.l
