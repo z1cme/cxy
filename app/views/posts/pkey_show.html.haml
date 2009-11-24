@@ -9,48 +9,19 @@
   .yui-b
     -box :class => 'hfeed' do  
       %h3=:users_blog.l :user=>  @user.login
+
       .hentry.main
         // %h4.entry-title= link_to "#{@post.title} | pkey= #{@post.pkey}", user_post_path(@user, @post), :rel => 'bookmark'
         %h4.entry-title= link_to "#{@post.title} | pkey= #{@post.pkey}", "/#{@post.pkey}", :rel => 'bookmark'
-        .vcard.author
-          %ul
-            %li.update
-              %a{"href"=>"/#{@post.pkey}", "rel"=>"bookmark"}
-                %abbr.published{"title"=>"#{@post.published_at}"}= @post.published_at_display("%B %d, %Y")
-            %li.view= :views.l+" (#{@post.view_count})"
-            %li.comments= link_to :comments.l+" (#{@post.comments.size})", user_post_path(@user, @post)+'#comments'      
-            - if current_user and current_user.can_request_friendship_with(@post.user)
-              %li.addfriend= add_friend_link(@post.user)
-            %li.print
-              %a{"href"=>"#", :onclick=>"window.print(); return false;", :title=>:print_this_story.l}= :print.l
-            %li.email
-              %a{:href=>"http://gmail.com", :target=>"gm", :title=>"gmail this to friends"}
-                gmail this to friends
-            -if @is_current_user || admin? || moderator?
-              %li.edit= link_to :edit.l, edit_user_post_path(@post.user, @post)
-              %li.delete= link_to :delete.l, user_post_path(@post.user, @post), {:method => :delete, :confirm => :permanently_delete_this_post.l}
-
-              
-          %script{:type => 'text/javascript'}
-            :plain
-              function showSendTo_friend(){
-                if ($('send_to_friend')){
-                  new Lightbox.base('send_to_friend');				                
-                } else {
-            = remote_function(:url => { :action => "send_to_friend", :params => {:user_id => @user.id, :id => @post.id} }, :success => "new Insertion.Top($('bd'), request.responseText)", :complete => "new Lightbox.base('send_to_friend'); return false;Element.toggle('send_to_friend');", :method => 'post')                 
-            :plain
-              }}
-              
-        / vcard
-        .entry-content
+        .pkey-show
           = @post.post
           = render :partial => 'polls/poll_ui', :locals => {:poll => @post.polls.first} unless @post.polls.empty?
           - unless @post.tags.empty?
             %ul.tags
               - @post.tags.each do |t|
                 %li=link_to( t.name, tag_url(t), :rel => 'tag')
-        / entry-content
-      / ends hentry
+          // pkey-show
+      // ends hentry
     -box :class => 'hfeed comments', :id => 'comments' do      
       %h3= :post_comments.l 
       %h2= :add_your_comment.l
