@@ -1,0 +1,6 @@
+commit 27b935dec65b2346fcdfc4608d0ed022135385e9
+Merge: d796fc6... 0f0f977...
+Author: David Heinemeier Hansson <david@loudthinking.com>
+Date:   Mon Nov 23 15:35:42 2009 -0600
+
+    Merge branch '2-3-stable' of github.com:rails/rails into 2-3-stable
