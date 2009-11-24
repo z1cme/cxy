@@ -16,6 +16,13 @@
         // bikle 2009-11-24
         .pkey-show
           = @post.post
+          %hr/
+          -if @is_current_user || admin? || moderator?
+            = link_to :edit.l, edit_user_post_path(@post.user, @post)
+            or ...
+            = link_to :delete.l, user_post_path(@post.user, @post), {:method => :delete, :confirm => :permanently_delete_this_post.l}
+            This post
+            %hr/
           = render :partial => 'polls/poll_ui', :locals => {:poll => @post.polls.first} unless @post.polls.empty?
           - unless @post.tags.empty?
             %ul.tags
