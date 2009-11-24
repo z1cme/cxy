@@ -1,8 +1,8 @@
 community_name: c1c.me
 ## community_name: "Community"
-community_tagline: "CommunityEngine Rocks!"
-community_description:  "The Best Place for People Who Love Communities"
-support_email:  "support@community.com"
+community_tagline: "c1c.me write a short-url-post for twitter"
+community_description:  "An easy way to share blog posts with twitter"
+support_email:  "c1cmehelp@gmail.com"
 meta_description: 'A description of your community for use in META tags.'
 meta_keywords: 'keywords for use in META tags'
 sections_enabled: ['photos', 'posts', 'clippings', 'contests', 'categories', 'events']
