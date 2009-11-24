@@ -32,23 +32,17 @@
             = remote_function(:update => "footer_content", :url => { :controller => 'base', :action => 'footer_content' })
 
       #CommunityFooter
-        %ul
-          %li
-            %a{:href=>application_url, :title=>"#{AppConfig.community_name} " + :home.l}= :home.l
-          - if !logged_in?
-            %li
-              = link_to :log_in.l , login_path 
-          - else
-            %li
-              %a{:href=>logout_url, :title=>:log_out_of_your.l + " #{AppConfig.community_name} " + :account.l}
-                =:log_out.l
+        %form{:method=>"get", :action=>"http://www.google.com/search", :target=>"gs"}
+          twitter.com Google site search:
+          %input{ :type=>"text", :name=>"q", :size=>"17", :maxlength=>"255", :id=>"search"}
+          %input{ :type=>"hidden", :name=>"sitesearch", :value=>"http://twitter.com", :id=>"ss1"}
+          %input{:value => "Search twitter",:type => "submit"}
 
+
+        %ul
           - Page.find(:all).each do |page|
             - if (logged_in? || page.page_public)
               %li= link_to page.title, pages_path(page) 
               
           - if @rss_title && @rss_url
             %li#rss= link_to :rss.l, @rss_url, {:title => @rss_title}
-
-        %p
-          = :community_tagline.l
