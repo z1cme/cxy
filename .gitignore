@@ -22,4 +22,4 @@ vendor/gems/rmagick-2.12.2/ext/RMagick/rmmontage.o
 vendor/gems/rmagick-2.12.2/ext/RMagick/rmpixel.o
 vendor/gems/rmagick-2.12.2/ext/RMagick/rmstruct.o
 vendor/gems/rmagick-2.12.2/ext/RMagick/rmutil.o
-
+vendor/gems/rmagick-2.12.2/lib/RMagick2.bundle
