@@ -20,7 +20,8 @@ production:
   database: c1cme
   username: c1cme
   password: c
-  socket: /var/lib/mysql/mysql.sock
+  socket: /tmp/mysql.sock
+#  socket: /var/lib/mysql/mysql.sock
 
 
 
